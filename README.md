@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Official Site Logo -->
-<img src="https://meghomeguards.gov.in/sites/default/files/logo_1_bigger.png" alt="Directorate of Civil Defence & Home Guards Logo" width="600px" style="margin-bottom: 20px;"/>
+<img src="https://meghomeguards.gov.in/sites/default/files/logo_1_bigger.png" alt="Directorate of Civil Defence & Home Guards Logo" width="700px" style="margin-bottom: 20px;"/>
 
 # 🏛️ Directorate of Civil Defence & Home Guards
 ### Government of Meghalaya, India
