@@ -138,8 +138,8 @@ $("a.style-g").attr("title","Black Theme");
   position: absolute !important;
   left: 100% !important;
   top: 0 !important;
-  background-color: #4C7C7C !important;
-  border: 1px solid #2b6cb0 !important;
+  background-color: #422e1a !important;
+  border: 1px solid #422e1a !important;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1) !important;
   list-style: none !important;
   margin: 0 !important;
@@ -181,10 +181,80 @@ $("a.style-g").attr("title","Black Theme");
 }
 
 .tb-megamenu-item.has-horizontal-dropdown .horizontal-dropdown-menu .dropdown-item a:hover {
-  background-color: #182F2C !important;
+  background-color: #55331C !important;
   color: #ffffff !important;
 }
+
+/* Style overrides to change primary teal theme to #55331C on all pages */
+.menu-bg, .tb-megamenu, #cssmenu, .tb-megamenu .nav {
+  background-color: #55331C !important;
+}
+.menu-bg-top {
+  border-bottom: 5px solid #55331C !important;
+}
+.top-header01 {
+  background-color: #55331C !important;
+}
+.tb-megamenu .dropdown-menu,
+.tb-megamenu .dropdown-menu .mega-nav,
+.tb-megamenu .mega-dropdown-inner,
+.tb-megamenu .tb-megamenu-submenu,
+.tb-megamenu .nav-child {
+  background-color: #422e1a !important;
+  border-color: #55331C !important;
+}
+.tb-megamenu .dropdown-menu li a:hover,
+.tb-megamenu .dropdown-menu .mega-nav li a:hover,
+.tb-megamenu .dropdown-menu .active a,
+.tb-megamenu .mega-nav .active a,
+.tb-megamenu .tb-megamenu-item.active > a {
+  background-color: #55331C !important;
+  color: #ffffff !important;
+}
+
+/* Sidebar, Section Blocks, and Footer Overrides */
+.siderbartitle h2,
+.bgorange h2,
+.block-views h2,
+.about-home-bg h2,
+.ntrtnw h2,
+.news-box h2,
+.news-box2 h2 {
+  background-color: #55331C !important;
+  background: #55331C !important;
+  color: #ffffff !important;
+}
+.footer-01,
+.footer-bg,
+.menu-footer-top {
+  background-color: #55331C !important;
+  background: #55331C !important;
+}
+.newsleft,
+.views-slideshow-controls-bottom {
+  background-color: #55331C !important;
+  background: #55331C !important;
+  border-right-color: #55331C !important;
+}
 </style>
+<script>
+(function($) {
+  $(document).ready(function() {
+    $('.tb-megamenu-nav').on('click', 'a', function(e) {
+      var href = $(this).attr('href');
+      if (href && href !== '#' && !href.startsWith('javascript:')) {
+        if ($(this).closest('.dropdown-menu').length > 0 || 
+            $(this).closest('.horizontal-dropdown-menu').length > 0 || 
+            !$(this).hasClass('dropdown-toggle')) {
+          e.preventDefault();
+          e.stopPropagation();
+          window.location.href = href;
+        }
+      }
+    });
+  });
+})(jQuery);
+</script>
 </head>
 <body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-1194 node-type-page i18n-en">
     
@@ -311,7 +381,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
 </div>
 </div>
 <div class="main">
-	<div class="menu-bg-top"></div>
+	<div class=""></div>
 	<div class="menu-bg">
 	<div class="container">
    <div class="col-sm-12 ">
@@ -328,12 +398,12 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
     </button>
 <div class="nav-collapse  always-show">
     <ul  class="tb-megamenu-nav nav level-0 items-12">
-  <li  data-id="736" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega">
+  <li  data-id="736" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega active active-trail">
   <a href="/"  title="Home">
         
     Home          </a>
   </li>
-<li  data-id="989" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega dropdown active active-trail">
+<li  data-id="989" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega dropdown">
   <a href="about_us.html"  class="dropdown-toggle " title="About Us">
         
     About Us          <span class="caret active active-trail"></span>
@@ -354,7 +424,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
   <a href="civil_defence.html" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" title="Civil Defence">
         
     Civil Defence <span class="caret"></span></a>
-    <ul class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu" aria-label="Civil Defence Submenu">
+    <ul class="horizontal-dropdown-menu" aria-label="Civil Defence Submenu">
         <li class="dropdown-item">
             <a href="civil_defence.html" class="dropdown-link">About Civil Defence</a>
         </li>
@@ -371,7 +441,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
   <a href="home_guard.html" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" title="Home Guard">
         
     Home Guards <span class="caret"></span></a>
-    <ul class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu" aria-label="Home Guards Submenu">
+    <ul class="horizontal-dropdown-menu" aria-label="Home Guards Submenu">
         <li class="dropdown-item">
             <a href="home_guard.html" class="dropdown-link">About Home Guards</a>
         </li>
@@ -493,7 +563,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
   <div class="tb-megamenu-column-inner mega-inner clearfix">
         <ul  class="tb-megamenu-subnav mega-nav level-1 items-2">
   <li  data-id="1911" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega">
-  <a href="/address-and-location"  title="Address and Location">
+  <a href="address_location.html"  title="Address and Location">
         
     Address and Location          </a>
   </li>
@@ -512,7 +582,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
 </li>
 
 <li  data-id="2164" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega">
-  <a href="/compendium-right-information-act-2005" >
+  <a href="rti.html" >
         
     RTI          </a>
   </li>
@@ -529,18 +599,11 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
   <div class="tb-megamenu-column-inner mega-inner clearfix">
         <ul  class="tb-megamenu-subnav mega-nav level-1 items-1">
   <li  data-id="2149" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega">
-  <a href="/internal-complaint-committees-iccs"  title="Internal Complaint Committees(ICCs) under the Sexual Harassment of Woemtn at Workplaces (Prevention, Redressal &amp; Prohibition) Act 2013">
+  <a href="internal_complaints.html"  title="Internal Complaint Committees(ICCs) under the Sexual Harassment of Woemtn at Workplaces (Prevention, Redressal &amp; Prohibition) Act 2013">
         
     Internal Complaint Committees (ICC)          </a>
   </li>
 </ul>
-  </div>
-</div>
-</div>
-  </div>
-</div>
-</li>
-
 <li  data-id="2150" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega dropdown">
   <a href="#"  class="dropdown-toggle" title="Medals and Decorations received by the Department.">
         
@@ -660,7 +723,22 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
   </div>
 </div>
 </div>
- <!-- /.region -->
+  </div>
+</div>
+</div>
+  </div>
+</div>
+</li>
+</ul>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+</li>   
+
+</ul>
+<!-- /.region -->
 			  </div>
 			</div>
 	  
@@ -735,7 +813,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
     <h2 tabindex="0">Notice Board</h2>
   
   <div class="content">
-    <div class="view view-news-block view-id-news_block view-display-id-block view-dom-id-7f30e0f59713a3f04b4a1a8897a3916d">
+    <div class="view view-news-block view-id-news_block view-display-id-block view-dom-id-466db38a9e74879118c31b90ded552ca">
         
   
   
@@ -747,7 +825,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
   <div id="views_slideshow_cycle_div_news_block-block_1_0" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-1 views-row-first views-row-odd" >
   <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-odd views-row-first item-list-slider">
     
-          <div class="newitem"><a href="/enrolment-notice-part-time-naik-and-part-time-lance-naik-volunteer">Enrolment Notice [Part-Time Naik and Part-Time Lance Naik (V...</a><img src="https://meghomeguards.gov.in/sites/default/files/new.gif" alt="new item"></div>
+          <div class="newitem"><a href="/enrolment-notice-part-time-naik-and-part-time-lance-naik-volunteer">Enrolment Notice [Part-Time Naik and Part-Time Lance Naik (V...</a> </div>
 <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2026-06-10T00:00:00+05:30">10/06/2026</span>  </div>
 <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-1 views-row-even views-row-first item-list-slider">
     
@@ -823,7 +901,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
   
       
 <div class="more-link">
-  <a href="notice_board.html">
+  <a href="/notice-board">
     more +  </a>
 </div>
   
@@ -839,7 +917,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
     <h2 tabindex="0">Measures to be taken...</h2>
   
   <div class="content">
-    <div class="view view-homepage-featured-block-1 view-id-homepage_featured_block_1 view-display-id-block view-dom-id-a64e348f6b284ef56919a643480b1901">
+    <div class="view view-homepage-featured-block-1 view-id-homepage_featured_block_1 view-display-id-block view-dom-id-e9abb3561a7fe2ab0d164ca19bb12f10">
         
   
   
@@ -874,7 +952,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
     <h2 tabindex="0">Disaster Management</h2>
   
   <div class="content">
-    <div class="view view-homepage-featured-block-2 view-id-homepage_featured_block_2 view-display-id-block view-dom-id-72ff3ebadca418718fcac564a7a22d8d">
+    <div class="view view-homepage-featured-block-2 view-id-homepage_featured_block_2 view-display-id-block view-dom-id-68f63617d5b1b78d7be8f881b0be5944">
         
   
   
@@ -909,7 +987,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
     <h2 tabindex="0">Links</h2>
   
   <div class="content">
-    <div class="view view-homepage-featured-block-4 view-id-homepage_featured_block_4 view-display-id-block view-dom-id-8ab09fd16ddb48e9c723ed7cc3b56125">
+    <div class="view view-homepage-featured-block-4 view-id-homepage_featured_block_4 view-display-id-block view-dom-id-6a264c562611fad944a6cddf6f324c61">
         
   
   
@@ -952,7 +1030,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
 
     
   <div class="content">
-    <div class="view view-footer-banner- view-id-footer_banner_ view-display-id-block view-dom-id-cb284961fc4ad3ccf370a924df5d474a">
+    <div class="view view-footer-banner- view-id-footer_banner_ view-display-id-block view-dom-id-712558a20d03b1dab14483fb9f3212d9">
         
   
   
@@ -986,7 +1064,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
 </div>
 </div>
 <div class="footer-bg">
-<div class="menu-footer-top"></div>
+<div class=""></div>
 <div class="col-sm-12 footer-01">
 
 	<div class="container">
@@ -1031,7 +1109,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
 
     
   <div class="content">
-    <div class="view view-copyrights view-id-copyrights view-display-id-block view-dom-id-7c4663286c12c6aae8cc22cfb7a09f60">
+    <div class="view view-copyrights view-id-copyrights view-display-id-block view-dom-id-8d87d421c3865bbd1903ae81060c7818">
         
   
   

@@ -138,8 +138,8 @@ $("a.style-g").attr("title","Black Theme");
   position: absolute !important;
   left: 100% !important;
   top: 0 !important;
-  background-color: #1a202c !important;
-  border: 1px solid #2b6cb0 !important;
+  background-color: #422e1a !important;
+  border: 1px solid #422e1a !important;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1) !important;
   list-style: none !important;
   margin: 0 !important;
@@ -181,10 +181,80 @@ $("a.style-g").attr("title","Black Theme");
 }
 
 .tb-megamenu-item.has-horizontal-dropdown .horizontal-dropdown-menu .dropdown-item a:hover {
-  background-color: #2b6cb0 !important;
+  background-color: #55331C !important;
   color: #ffffff !important;
 }
+
+/* Style overrides to change primary teal theme to #55331C on all pages */
+.menu-bg, .tb-megamenu, #cssmenu, .tb-megamenu .nav {
+  background-color: #55331C !important;
+}
+.menu-bg-top {
+  border-bottom: 5px solid #55331C !important;
+}
+.top-header01 {
+  background-color: #55331C !important;
+}
+.tb-megamenu .dropdown-menu,
+.tb-megamenu .dropdown-menu .mega-nav,
+.tb-megamenu .mega-dropdown-inner,
+.tb-megamenu .tb-megamenu-submenu,
+.tb-megamenu .nav-child {
+  background-color: #422e1a !important;
+  border-color: #55331C !important;
+}
+.tb-megamenu .dropdown-menu li a:hover,
+.tb-megamenu .dropdown-menu .mega-nav li a:hover,
+.tb-megamenu .dropdown-menu .active a,
+.tb-megamenu .mega-nav .active a,
+.tb-megamenu .tb-megamenu-item.active > a {
+  background-color: #55331C !important;
+  color: #ffffff !important;
+}
+
+/* Sidebar, Section Blocks, and Footer Overrides */
+.siderbartitle h2,
+.bgorange h2,
+.block-views h2,
+.about-home-bg h2,
+.ntrtnw h2,
+.news-box h2,
+.news-box2 h2 {
+  background-color: #55331C !important;
+  background: #55331C !important;
+  color: #ffffff !important;
+}
+.footer-01,
+.footer-bg,
+.menu-footer-top {
+  background-color: #55331C !important;
+  background: #55331C !important;
+}
+.newsleft,
+.views-slideshow-controls-bottom {
+  background-color: #55331C !important;
+  background: #55331C !important;
+  border-right-color: #55331C !important;
+}
 </style>
+<script>
+(function($) {
+  $(document).ready(function() {
+    $('.tb-megamenu-nav').on('click', 'a', function(e) {
+      var href = $(this).attr('href');
+      if (href && href !== '#' && !href.startsWith('javascript:')) {
+        if ($(this).closest('.dropdown-menu').length > 0 || 
+            $(this).closest('.horizontal-dropdown-menu').length > 0 || 
+            !$(this).hasClass('dropdown-toggle')) {
+          e.preventDefault();
+          e.stopPropagation();
+          window.location.href = href;
+        }
+      }
+    });
+  });
+})(jQuery);
+</script>
 </head>
 <body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-1098 node-type-page i18n-en">
     
@@ -310,7 +380,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
 </div>
 </div>
 <div class="main">
-	<div class="menu-bg-top"></div>
+	<div class=""></div>
 	<div class="menu-bg">
 	<div class="container">
    <div class="col-sm-12 ">
@@ -325,17 +395,17 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
       <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar tb-megamenu-button" type="button">
      .<img src="https://meghomeguards.gov.in/sites/all/themes/nexus/images/menu.png" alt="menu">
     </button>
-    <div class="nav-collapse  always-show">
+<div class="nav-collapse  always-show">
     <ul  class="tb-megamenu-nav nav level-0 items-12">
-  <li  data-id="736" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega">
+  <li  data-id="736" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega active active-trail">
   <a href="/"  title="Home">
         
     Home          </a>
   </li>
-<li  data-id="989" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega dropdown active active-trail">
-  <a href="about_us.html"  class="dropdown-toggle" title="About Us">
+<li  data-id="989" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega dropdown">
+  <a href="about_us.html"  class="dropdown-toggle " title="About Us">
         
-    About Us          <span class="caret"></span>
+    About Us          <span class="caret active active-trail"></span>
           </a>
   <div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
   <div class="mega-dropdown-inner">
@@ -492,7 +562,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
   <div class="tb-megamenu-column-inner mega-inner clearfix">
         <ul  class="tb-megamenu-subnav mega-nav level-1 items-2">
   <li  data-id="1911" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega">
-  <a href="/address-and-location"  title="Address and Location">
+  <a href="address_location.html"  title="Address and Location">
         
     Address and Location          </a>
   </li>
@@ -511,7 +581,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
 </li>
 
 <li  data-id="2164" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega">
-  <a href="/compendium-right-information-act-2005" >
+  <a href="rti.html" >
         
     RTI          </a>
   </li>
@@ -528,9 +598,49 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
   <div class="tb-megamenu-column-inner mega-inner clearfix">
         <ul  class="tb-megamenu-subnav mega-nav level-1 items-1">
   <li  data-id="2149" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega">
-  <a href="/internal-complaint-committees-iccs"  title="Internal Complaint Committees(ICCs) under the Sexual Harassment of Woemtn at Workplaces (Prevention, Redressal &amp; Prohibition) Act 2013">
+  <a href="internal_complaints.html"  title="Internal Complaint Committees(ICCs) under the Sexual Harassment of Woemtn at Workplaces (Prevention, Redressal &amp; Prohibition) Act 2013">
         
     Internal Complaint Committees (ICC)          </a>
+  </li>
+</ul>
+<li  data-id="2150" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega dropdown">
+  <a href="#"  class="dropdown-toggle" title="Medals and Decorations received by the Department.">
+        
+    Medals & Decorations          <span class="caret"></span>
+          </a>
+  <div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    <div  class="tb-megamenu-row row-fluid">
+  <div  data-class="" data-width="12" data-hidewcol="0" id="tb-megamenu-column-10" class="tb-megamenu-column span12  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-1 items-3">
+  <li  data-id="2161" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega">
+  <a href="/recipients-awards-meghalaya-day-excellence" >
+        
+    Meghalaya Day Excellence Awards          </a>
+  </li>
+
+<li  data-id="2154" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega dropdown-submenu">
+  <a href="#"  class="dropdown-toggle" title="Commendation Disc &amp; Certificates">
+        
+    Commendation Disc & Certificates          <span class="caret"></span>
+          </a>
+  <div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    <div  class="tb-megamenu-row row-fluid">
+  <div  data-class="" data-width="12" data-hidewcol="0" id="tb-megamenu-column-8" class="tb-megamenu-column span12  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-2 items-2">
+  <li  data-id="2155" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-3 mega">
+  <a href="/recipients-dg-mha-disc-commendation-certificates"  title="Recipients of DG Disc &amp; Commendation Certificates">
+        
+    DG MHA Disc & Commendation Certificates          </a>
+  </li>
+
+<li  data-id="2158" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-3 mega">
+  <a href="/dgcg-meghalaya-disc-commendation-certificates" >
+        
+    DG Meghalaya Disc & Commendation Certificates          </a>
   </li>
 </ul>
   </div>
@@ -540,13 +650,94 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
 </div>
 </li>
 
+<li  data-id="2151" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega dropdown-submenu">
+  <a href="#"  class="dropdown-toggle" title="Medal Awards">
+        
+    Medals          <span class="caret"></span>
+          </a>
+  <div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    <div  class="tb-megamenu-row row-fluid">
+  <div  data-class="" data-width="12" data-hidewcol="0" id="tb-megamenu-column-9" class="tb-megamenu-column span12  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-2 items-6">
+  <li  data-id="2152" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-3 mega">
+  <a href="/recipients-president%E2%80%99s-home-guards-civil-defence-medal-distinguished-services"  title="Recipients of President&#039;s HG &amp; CD Medal for Distinguished Service">
+        
+    President's Home Guards & Civil Defence Medal for Distinguished Service          </a>
+  </li>
+
+<li  data-id="2153" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-3 mega">
+  <a href="/recipients-home-guards-civil-defence-medal-meritorious-services" >
+        
+    Home Guards & Civil Defence Medal for Meritorious Services          </a>
+  </li>
+
+<li  data-id="2159" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-3 mega">
+  <a href="/recipients-home-guards-civil-defence-medal-gallantry" >
+        
+    Home Guards & Civil Defence Medal for Gallantry          </a>
+  </li>
+
+<li  data-id="2156" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-3 mega">
+  <a href="/recipients-medal-meritorious-service"  title="Recipients of Medal for Meritorious Service">
+        
+    Medal for Meritorious Service          </a>
+  </li>
+
+<li  data-id="2162" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-3 mega">
+  <a href="#" >
+        
+    Meghalaya Governor's Civil Defence & Home Guards Medal          </a>
+  </li>
+
+<li  data-id="2163" data-level="3" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-3 mega">
+  <a href="/recipients-cms-disaster-response-medal-outstanding-services" >
+        
+    CM's Disaster Response Medal for Outstanding Service          </a>
+  </li>
+</ul>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+</li>
+</ul>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+</li>
+
+<li  data-id="1987" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega">
+  <a href="/photo-gallery"  title="Photo Gallery">
+        
+    Photo Gallery          </a>
+  </li>
 </ul>
       </div>
   </div>
   </div>
 </div>
 </div>
- <!-- /.region -->
+  </div>
+</div>
+</div>
+  </div>
+</div>
+</li>
+</ul>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+</li>   
+
+</ul>
+<!-- /.region -->
 			  </div>
 			</div>
 	  
@@ -554,7 +745,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
    </div>
     </div>
 	 </div>
-<div id="breadcrumbs"><div class="container"><h2 class="element-invisible">You are here</h2><nav class="breadcrumb"><div class="getbreadcrumbfont"><a href="/">Home</a> » <span class="nolink">Civil Defence</span> » Civil Defence</div></nav></div></div>
+<div id="breadcrumbs"><div class="container"><h2 class="element-invisible">You are here</h2><nav class="breadcrumb"><div class="getbreadcrumbfont"><a href="/">Home</a> » <a href="/about-us" title="About Us">About Us</a> » Basic Statistics</div></nav></div></div>
  <div class="container" id="maincontain-textsize">
 <div id="maincontent"></div>
 <div class="row siderbartitle">
@@ -574,7 +765,8 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
     <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Since the basic duty of this organisation is to raise volunteers as per prescribed target the following are the statistics</p>
 <p>The authorised strength of Civil Defence &amp; Home Guards volunteer for our State is 13594 and 2538 respectively. This mark has however never been attained and with the passage of time the number of volunteers in our Rolls is gradually getting reduced. The primary reason being drastic cuts in financial sanctions for conducting Basic Trainings for Home Guards volunteers and the 3 (three) Civil Defence Towns for Civil Defence volunteers. Besides every volunteer cannot be retained in the roll for more than 3 (three) years as per the existing regulations/norms. So the number keep fluctuating and currently the number of trained Home Guards is 1850 and Civil Defence is 2684 as on 31/3/2004</p>
 </div></div></div>  </div>
-<footer>
+
+      <footer>
           </footer>
   
     </div>
@@ -588,7 +780,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
 	
 	
 	</div>
-
+	
     <div class="col-sm-3">
 	<div class="news-box">
 	
@@ -598,7 +790,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
     <h2 tabindex="0">Notice Board</h2>
   
   <div class="content">
-    <div class="view view-news-block view-id-news_block view-display-id-block view-dom-id-e573a79bb2ef4711c89b06d8472856d6">
+    <div class="view view-news-block view-id-news_block view-display-id-block view-dom-id-90659494240a7a88330f432d36c0a45a">
         
   
   
@@ -610,7 +802,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
   <div id="views_slideshow_cycle_div_news_block-block_1_0" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-1 views-row-first views-row-odd" >
   <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-odd views-row-first item-list-slider">
     
-          <div class="newitem"><a href="/enrolment-notice-part-time-naik-and-part-time-lance-naik-volunteer">Enrolment Notice [Part-Time Naik and Part-Time Lance Naik (V...</a><img src="https://meghomeguards.gov.in/sites/default/files/new.gif" alt="new item"></div>
+          <div class="newitem"><a href="/enrolment-notice-part-time-naik-and-part-time-lance-naik-volunteer">Enrolment Notice [Part-Time Naik and Part-Time Lance Naik (V...</a> </div>
 <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2026-06-10T00:00:00+05:30">10/06/2026</span>  </div>
 <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-1 views-row-even views-row-first item-list-slider">
     
@@ -686,7 +878,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
   
       
 <div class="more-link">
-  <a href="notice_board.html">
+  <a href="/notice-board">
     more +  </a>
 </div>
   
@@ -702,7 +894,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
     <h2 tabindex="0">Measures to be taken...</h2>
   
   <div class="content">
-    <div class="view view-homepage-featured-block-1 view-id-homepage_featured_block_1 view-display-id-block view-dom-id-44d9e000bdc9236f95c40aea3ef46c3f">
+    <div class="view view-homepage-featured-block-1 view-id-homepage_featured_block_1 view-display-id-block view-dom-id-9b1775784938fa8591ddbd61c7f35074">
         
   
   
@@ -737,7 +929,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
     <h2 tabindex="0">Disaster Management</h2>
   
   <div class="content">
-    <div class="view view-homepage-featured-block-2 view-id-homepage_featured_block_2 view-display-id-block view-dom-id-ecf68bb16d8af0e716bd39f90421f9b6">
+    <div class="view view-homepage-featured-block-2 view-id-homepage_featured_block_2 view-display-id-block view-dom-id-56a560fb1933288f7aa72f208b7697ce">
         
   
   
@@ -772,7 +964,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
     <h2 tabindex="0">Links</h2>
   
   <div class="content">
-    <div class="view view-homepage-featured-block-4 view-id-homepage_featured_block_4 view-display-id-block view-dom-id-d5f85b6ab1f9d4ce365d47bdb645a842">
+    <div class="view view-homepage-featured-block-4 view-id-homepage_featured_block_4 view-display-id-block view-dom-id-89b1bd8280f1e65a5af2d116d5672b49">
         
   
   
@@ -815,8 +1007,31 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
 
     
   <div class="content">
-    <div class="view view-footer-banner- view-id-footer_banner_ view-display-id-block view-dom-id-6241557aa83451fd8356ce6d36ab22b4">  
-       
+    <div class="view view-footer-banner- view-id-footer_banner_ view-display-id-block view-dom-id-51263409c132fde7435f5398f351d596">
+        
+  
+  
+      <div class="view-content">
+      <ul class="jcarousel jcarousel-view--footer-banner---block jcarousel-dom-1 jcarousel-skin-default">
+      <li class="jcarousel-item-1 odd" style="display: none;">  
+  <div class="views-field views-field-field-url">        <div class="field-content"><a href="https://india.gov.in/" target="_blank" title="https://india.gov.in/"><img typeof="foaf:Image" src="https://meghomeguards.gov.in/sites/default/files/styles/footer_logo/public/footer-004.jpg?itok=gLb2GYeT" width="268" height="73" alt="National Portal of India" title="National Portal of India Logo" /></a></div>  </div></li>
+      <li class="jcarousel-item-2 even" style="display: none;">  
+  <div class="views-field views-field-field-url">        <div class="field-content"><a href="https://www.vidyalakshmi.co.in/Students/" target="_blank" title="https://www.vidyalakshmi.co.in/Students/"><img typeof="foaf:Image" src="https://meghomeguards.gov.in/sites/default/files/styles/footer_logo/public/footer-006.jpg?itok=1VI0HVCJ" width="268" height="73" alt="Vidya Lakshmi Portal" title="Vidya Lakshmi Fullfilling Education Aspirations" /></a></div>  </div></li>
+      <li class="jcarousel-item-3 odd" style="display: none;">  
+  <div class="views-field views-field-field-url">        <div class="field-content"><a href="http://meghalaya.gov.in/megportal/" target="_blank" title="http://meghalaya.gov.in/megportal/"><img typeof="foaf:Image" src="https://meghomeguards.gov.in/sites/default/files/styles/footer_logo/public/footer-005.jpg?itok=AcixQw1i" width="268" height="73" alt="Govement of meghalaya logo" title="The official portal of goverment of meghalaya" /></a></div>  </div></li>
+      <li class="jcarousel-item-4 even" style="display: none;">  
+  <div class="views-field views-field-field-url">        <div class="field-content"><a href="http://www.educationforallinindia.com/" target="_blank" title="http://www.educationforallinindia.com/"><img typeof="foaf:Image" src="https://meghomeguards.gov.in/sites/default/files/styles/footer_logo/public/footer-003.jpg?itok=VubnXAa1" width="268" height="73" alt="Education for all in India" title="Education for all in India Sarva Shiksha Abhiyan" /></a></div>  </div></li>
+      <li class="jcarousel-item-5 odd" style="display: none;">  
+  <div class="views-field views-field-field-url">        <div class="field-content"><a href="http://ncert.nic.in/" target="_blank" title="http://ncert.nic.in/"><img typeof="foaf:Image" src="https://meghomeguards.gov.in/sites/default/files/styles/footer_logo/public/footer-002.jpg?itok=fqnUKBXW" width="268" height="73" alt="NCERT" title="National Council Of Educational Research And Training" /></a></div>  </div></li>
+      <li class="jcarousel-item-6 even" style="display: none;">  
+  <div class="views-field views-field-field-url">        <div class="field-content"><a href="http://mhrd.gov.in/" target="_blank" title="http://mhrd.gov.in/"><img typeof="foaf:Image" src="https://meghomeguards.gov.in/sites/default/files/styles/footer_logo/public/footer-001.jpg?itok=yqfZPqPP" width="268" height="73" alt="MHRD" title="Goverment of india ministry of human resource developemnt" /></a></div>  </div></li>
+  </ul>
+    </div>
+  
+  
+  
+  
+  
   
 </div>  </div>
 </div>
@@ -826,7 +1041,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
 </div>
 </div>
 <div class="footer-bg">
-<div class="menu-footer-top"></div>
+<div class=""></div>
 <div class="col-sm-12 footer-01">
 
 	<div class="container">
@@ -871,7 +1086,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
 
     
   <div class="content">
-    <div class="view view-copyrights view-id-copyrights view-display-id-block view-dom-id-429d3929cb8c7f7d114fb04725cda2b4">
+    <div class="view view-copyrights view-id-copyrights view-display-id-block view-dom-id-8d87d421c3865bbd1903ae81060c7818">
         
   
   

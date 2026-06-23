@@ -137,8 +137,8 @@ $("a.style-g").attr("title","Black Theme");
   position: absolute !important;
   left: 100% !important;
   top: 0 !important;
-  background-color: #4C7C7C !important;
-  border: 1px solid #2b6cb0 !important;
+  background-color: #422e1a !important;
+  border: 1px solid #422e1a !important;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1) !important;
   list-style: none !important;
   margin: 0 !important;
@@ -167,11 +167,11 @@ $("a.style-g").attr("title","Black Theme");
 }
 
 .tb-megamenu-item.has-horizontal-dropdown .horizontal-dropdown-menu .dropdown-item a {
-  display: inline-block !important;
-  padding: 10px 12px !important;
+  display: block !important;
+  padding: 8px 14px !important;
   color: #ffffff !important;
   font-family: inherit !important;
-  font-size: 14px !important;
+  font-size: 13px !important;
   text-decoration: none !important;
   font-weight: 500 !important;
   background: transparent !important;
@@ -180,10 +180,80 @@ $("a.style-g").attr("title","Black Theme");
 }
 
 .tb-megamenu-item.has-horizontal-dropdown .horizontal-dropdown-menu .dropdown-item a:hover {
-  background-color: #182F2C !important;
+  background-color: #55331C !important;
   color: #ffffff !important;
 }
+
+/* Style overrides to change primary teal theme to #55331C on all pages */
+.menu-bg, .tb-megamenu, #cssmenu, .tb-megamenu .nav {
+  background-color: #55331C !important;
+}
+.menu-bg-top {
+  border-bottom: 5px solid #55331C !important;
+}
+.top-header01 {
+  background-color: #55331C !important;
+}
+.tb-megamenu .dropdown-menu,
+.tb-megamenu .dropdown-menu .mega-nav,
+.tb-megamenu .mega-dropdown-inner,
+.tb-megamenu .tb-megamenu-submenu,
+.tb-megamenu .nav-child {
+  background-color: #422e1a !important;
+  border-color: #55331C !important;
+}
+.tb-megamenu .dropdown-menu li a:hover,
+.tb-megamenu .dropdown-menu .mega-nav li a:hover,
+.tb-megamenu .dropdown-menu .active a,
+.tb-megamenu .mega-nav .active a,
+.tb-megamenu .tb-megamenu-item.active > a {
+  background-color: #55331C !important;
+  color: #ffffff !important;
+}
+
+/* Sidebar, Section Blocks, and Footer Overrides */
+.siderbartitle h2,
+.bgorange h2,
+.block-views h2,
+.about-home-bg h2,
+.ntrtnw h2,
+.news-box h2,
+.news-box2 h2 {
+  background-color: #55331C !important;
+  background: #55331C !important;
+  color: #ffffff !important;
+}
+.footer-01,
+.footer-bg,
+.menu-footer-top {
+  background-color: #55331C !important;
+  background: #55331C !important;
+}
+.newsleft,
+.views-slideshow-controls-bottom {
+  background-color: #55331C !important;
+  background: #55331C !important;
+  border-right-color: #55331C !important;
+}
 </style>
+<script>
+(function($) {
+  $(document).ready(function() {
+    $('.tb-megamenu-nav').on('click', 'a', function(e) {
+      var href = $(this).attr('href');
+      if (href && href !== '#' && !href.startsWith('javascript:')) {
+        if ($(this).closest('.dropdown-menu').length > 0 || 
+            $(this).closest('.horizontal-dropdown-menu').length > 0 || 
+            !$(this).hasClass('dropdown-toggle')) {
+          e.preventDefault();
+          e.stopPropagation();
+          window.location.href = href;
+        }
+      }
+    });
+  });
+})(jQuery);
+</script>
 </head>
 <body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-1097 node-type-page i18n-en">
     
@@ -309,7 +379,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
 </div>
 </div>
 <div class="main">
-	<div class="menu-bg-top"></div>
+	<div class=""></div>
 	<div class="menu-bg">
 	<div class="container">
    <div class="col-sm-12 ">
@@ -319,19 +389,19 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
   <div id="block-tb-megamenu-main-menu" class="block block-tb-megamenu">
 
     
-<div class="content">
+  <div class="content">
     <div  class="tb-megamenu tb-megamenu-main-menu">
       <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar tb-megamenu-button" type="button">
      .<img src="https://meghomeguards.gov.in/sites/all/themes/nexus/images/menu.png" alt="menu">
     </button>
-    <div class="nav-collapse  always-show">
+<div class="nav-collapse  always-show">
     <ul  class="tb-megamenu-nav nav level-0 items-12">
-  <li  data-id="736" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega ">
+  <li  data-id="736" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega active active-trail">
   <a href="/"  title="Home">
         
     Home          </a>
   </li>
-<li  data-id="989" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega dropdown active active-trail">
+<li  data-id="989" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega dropdown">
   <a href="about_us.html"  class="dropdown-toggle " title="About Us">
         
     About Us          <span class="caret active active-trail"></span>
@@ -352,7 +422,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
   <a href="civil_defence.html" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" title="Civil Defence">
         
     Civil Defence <span class="caret"></span></a>
-    <ul class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu" aria-label="Civil Defence Submenu">
+    <ul class="horizontal-dropdown-menu" aria-label="Civil Defence Submenu">
         <li class="dropdown-item">
             <a href="civil_defence.html" class="dropdown-link">About Civil Defence</a>
         </li>
@@ -369,7 +439,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
   <a href="home_guard.html" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" title="Home Guard">
         
     Home Guards <span class="caret"></span></a>
-    <ul class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu" aria-label="Home Guards Submenu">
+    <ul class="horizontal-dropdown-menu" aria-label="Home Guards Submenu">
         <li class="dropdown-item">
             <a href="home_guard.html" class="dropdown-link">About Home Guards</a>
         </li>
@@ -381,8 +451,9 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
         </li>
     </ul>
   </li>
+
 <li  data-id="1912" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega">
-  <a href="/basic-statistics"  title="Basic Statistics">
+  <a href="basic_statistics.html"  title="Basic Statistics">
         
     Basic Statistics          </a>
   </li>
@@ -394,7 +465,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
   </li>
 
 <li  data-id="993" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega">
-  <a href="/programmes-schemes"  title="Programmes &amp; Schemes">
+  <a href="programmes_schemes.html"  title="Programmes &amp; Schemes">
         
     Programmes & Schemes          </a>
   </li>
@@ -406,43 +477,10 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
   </li>
 
 <li  data-id="2157" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega">
-  <a href="/whos-who" >
+  <a href="whos_who.html" >
         
     Who's Who          </a>
   </li>
-</ul>
-  </div>
-</div>
-</div>
-  </div>
-</div>
-</li>
-
-<li  data-id="2141" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega dropdown">
-  <div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
-  <div class="mega-dropdown-inner">
-    <div  class="tb-megamenu-row row-fluid">
-  <div  data-class="" data-width="12" data-hidewcol="0" id="tb-megamenu-column-2" class="tb-megamenu-column span12  mega-col-nav">
-  <div class="tb-megamenu-column-inner mega-inner clearfix">
-        <ul  class="tb-megamenu-subnav mega-nav level-1 items-3">
-  
-</ul>
-  </div>
-</div>
-</div>
-  </div>
-</div>
-</li>
-
-<li  data-id="1909" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega dropdown">
-
-  <div  data-class="" data-width="" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
-  <div class="mega-dropdown-inner">
-    <div  class="tb-megamenu-row row-fluid">
-  <div  data-class="" data-width="12" data-hidewcol="0" id="tb-megamenu-column-3" class="tb-megamenu-column span12  mega-col-nav">
-  <div class="tb-megamenu-column-inner mega-inner clearfix">
-        <ul  class="tb-megamenu-subnav mega-nav level-1 items-3">
- 
 </ul>
   </div>
 </div>
@@ -523,7 +561,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
   <div class="tb-megamenu-column-inner mega-inner clearfix">
         <ul  class="tb-megamenu-subnav mega-nav level-1 items-2">
   <li  data-id="1911" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega">
-  <a href="/address-and-location"  title="Address and Location">
+  <a href="address_location.html"  title="Address and Location">
         
     Address and Location          </a>
   </li>
@@ -542,7 +580,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
 </li>
 
 <li  data-id="2164" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega">
-  <a href="/compendium-right-information-act-2005" >
+  <a href="rti.html" >
         
     RTI          </a>
   </li>
@@ -559,18 +597,11 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
   <div class="tb-megamenu-column-inner mega-inner clearfix">
         <ul  class="tb-megamenu-subnav mega-nav level-1 items-1">
   <li  data-id="2149" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega">
-  <a href="/internal-complaint-committees-iccs"  title="Internal Complaint Committees(ICCs) under the Sexual Harassment of Woemtn at Workplaces (Prevention, Redressal &amp; Prohibition) Act 2013">
+  <a href="internal_complaints.html"  title="Internal Complaint Committees(ICCs) under the Sexual Harassment of Woemtn at Workplaces (Prevention, Redressal &amp; Prohibition) Act 2013">
         
     Internal Complaint Committees (ICC)          </a>
   </li>
 </ul>
-  </div>
-</div>
-</div>
-  </div>
-</div>
-</li>
-
 <li  data-id="2150" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega dropdown">
   <a href="#"  class="dropdown-toggle" title="Medals and Decorations received by the Department.">
         
@@ -690,6 +721,21 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
   </div>
 </div>
 </div>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+</li>
+</ul>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+</li>   
+
+</ul>
  <!-- /.region -->
 			  </div>
 			</div>
@@ -698,7 +744,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
    </div>
     </div>
 	 </div>
-<div id="breadcrumbs"><div class="container"><h2 class="element-invisible">You are here</h2><nav class="breadcrumb"><div class="getbreadcrumbfont"><a href="/">Home</a> » <a href="/about-us" title="About Us">About Us</a> » Objectives</div></nav></div></div>
+<div id="breadcrumbs"><div class="container"><h2 class="element-invisible">You are here</h2><nav class="breadcrumb"><div class="getbreadcrumbfont"><a href="/">Home</a> » <a href="about_us.html" title="About Us">About Us</a> » Objectives</div></nav></div></div>
  <div class="container" id="maincontain-textsize">
 <div id="maincontent"></div>
 <div class="row siderbartitle">
@@ -773,7 +819,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
     <h2 tabindex="0">Notice Board</h2>
   
   <div class="content">
-    <div class="view view-news-block view-id-news_block view-display-id-block view-dom-id-18bf3121eb463c3e908a702dc0fbb96f">
+    <div class="view view-news-block view-id-news_block view-display-id-block view-dom-id-aa34abcf45b0c6607d40582919b10813">
         
   
   
@@ -785,7 +831,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
   <div id="views_slideshow_cycle_div_news_block-block_1_0" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-1 views-row-first views-row-odd" >
   <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-odd views-row-first item-list-slider">
     
-          <div class="newitem"><a href="/enrolment-notice-part-time-naik-and-part-time-lance-naik-volunteer">Enrolment Notice [Part-Time Naik and Part-Time Lance Naik (V...</a><img src="https://meghomeguards.gov.in/sites/default/files/new.gif" alt="new item"></div>
+          <div class="newitem"><a href="/enrolment-notice-part-time-naik-and-part-time-lance-naik-volunteer">Enrolment Notice [Part-Time Naik and Part-Time Lance Naik (V...</a> </div>
 <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2026-06-10T00:00:00+05:30">10/06/2026</span>  </div>
 <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-1 views-row-even views-row-first item-list-slider">
     
@@ -793,21 +839,21 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
 <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2026-05-20T00:00:00+05:30">20/05/2026</span>  </div>
 <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-2 views-row-odd views-row-first item-list-slider">
     
-          <div class="newitem"><a href="/enrolment-notice-personal-interview-part-time-platoon-havildars-volunteers">Enrolment Notice [Personal Interview for Part Time Platoon H...</a> </div>
+          <div class="newitem"><a href="/notice-enrollment-please-check-recruitment-section-website">Notice for Enrollment (Please check the Recruitment section...</a> </div>
 <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2026-05-04T00:00:00+05:30">04/05/2026</span>  </div>
 </div>
 <div id="views_slideshow_cycle_div_news_block-block_1_1" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-2 views_slideshow_cycle_hidden views-row-even" >
   <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-odd item-list-slider">
     
-          <div class="newitem"><a href="/notice-enrollment-please-check-recruitment-section-website">Notice for Enrollment (Please check the Recruitment section...</a> </div>
+          <div class="newitem"><a href="/enrolment-notice-personal-interview-part-time-platoon-havildars-volunteers">Enrolment Notice [Personal Interview for Part Time Platoon H...</a> </div>
 <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2026-05-04T00:00:00+05:30">04/05/2026</span>  </div>
 <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-1 views-row-even item-list-slider">
     
-          <div class="newitem"><a href="/notice-enrollment-post-18-nos-part-time-platoon-havildar-volunteers">Notice for Enrollment for the Post of 18 nos. of Part-Time P...</a> </div>
+          <div class="newitem"><a href="/notice-enrollment-pdf">Notice for Enrollment (PDF)</a> </div>
 <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2026-03-10T00:00:00+05:30">10/03/2026</span>  </div>
 <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-2 views-row-odd item-list-slider">
     
-          <div class="newitem"><a href="/notice-enrollment-pdf">Notice for Enrollment (PDF)</a> </div>
+          <div class="newitem"><a href="/notice-enrollment-post-18-nos-part-time-platoon-havildar-volunteers">Notice for Enrollment for the Post of 18 nos. of Part-Time P...</a> </div>
 <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2026-03-10T00:00:00+05:30">10/03/2026</span>  </div>
 </div>
 <div id="views_slideshow_cycle_div_news_block-block_1_2" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-3 views_slideshow_cycle_hidden views-row-odd" >
@@ -831,25 +877,25 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
 <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2025-06-23T00:00:00+05:30">23/06/2025</span>  </div>
 <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-1 views-row-even item-list-slider">
     
-          <div class="newitem"><a href="/result-successful-candidates-qualified-personal-interview-post-non-combatant-employees-nces">Result of the successful candidates qualified for Personal I...</a> </div>
+          <div class="newitem"><a href="/recruitment-notice">Recruitment Notice</a> </div>
 <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2025-06-13T00:00:00+05:30">13/06/2025</span>  </div>
 <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-2 views-row-odd item-list-slider">
     
-          <div class="newitem"><a href="/recruitment-notice">Recruitment Notice</a> </div>
+          <div class="newitem"><a href="/result-successful-candidates-qualified-personal-interview-post-non-combatant-employees-nces">Result of the successful candidates qualified for Personal I...</a> </div>
 <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2025-06-13T00:00:00+05:30">13/06/2025</span>  </div>
 </div>
 <div id="views_slideshow_cycle_div_news_block-block_1_4" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-5 views_slideshow_cycle_hidden views-row-last views-row-odd" >
   <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-odd item-list-slider">
     
-          <div class="newitem"><a href="/result-successful-candidates-qualified-personal-interview-post-guardsman">Result of the successful candidates qualified for Personal I...</a> </div>
+          <div class="newitem"><a href="/result-successful-candidates-qualified-personal-interview-post-sub-inspector">Result of the successful candidates qualified for Personal I...</a> </div>
 <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2025-06-06T00:00:00+05:30">06/06/2025</span>  </div>
 <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-1 views-row-even item-list-slider">
     
-          <div class="newitem"><a href="/result-successful-candidates-qualified-personal-interview-post-driver">Result of the successful candidates qualified for Personal I...</a> </div>
+          <div class="newitem"><a href="/result-successful-candidates-qualified-personal-interview-post-guardsman">Result of the successful candidates qualified for Personal I...</a> </div>
 <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2025-06-06T00:00:00+05:30">06/06/2025</span>  </div>
 <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-2 views-row-odd item-list-slider">
     
-          <div class="newitem"><a href="/result-successful-candidates-qualified-personal-interview-post-sub-inspector">Result of the successful candidates qualified for Personal I...</a> </div>
+          <div class="newitem"><a href="/result-successful-candidates-qualified-personal-interview-post-driver">Result of the successful candidates qualified for Personal I...</a> </div>
 <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2025-06-06T00:00:00+05:30">06/06/2025</span>  </div>
 </div>
 </div>
@@ -861,7 +907,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
   
       
 <div class="more-link">
-  <a href="notice_board.html">
+  <a href="/notice-board">
     more +  </a>
 </div>
   
@@ -877,7 +923,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
     <h2 tabindex="0">Measures to be taken...</h2>
   
   <div class="content">
-    <div class="view view-homepage-featured-block-1 view-id-homepage_featured_block_1 view-display-id-block view-dom-id-3147cbb34b027132fc48868fcd93b646">
+    <div class="view view-homepage-featured-block-1 view-id-homepage_featured_block_1 view-display-id-block view-dom-id-758ec5f754fb95cc66c2c2fc8e18c935">
         
   
   
@@ -912,7 +958,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
     <h2 tabindex="0">Disaster Management</h2>
   
   <div class="content">
-    <div class="view view-homepage-featured-block-2 view-id-homepage_featured_block_2 view-display-id-block view-dom-id-0abf7bdf149847b37b357f0279b22c59">
+    <div class="view view-homepage-featured-block-2 view-id-homepage_featured_block_2 view-display-id-block view-dom-id-418109d5e8d99aa9c0e9099f2c42194d">
         
   
   
@@ -947,7 +993,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
     <h2 tabindex="0">Links</h2>
   
   <div class="content">
-    <div class="view view-homepage-featured-block-4 view-id-homepage_featured_block_4 view-display-id-block view-dom-id-c78f1edebdc7e5ea00879509c0a4772e">
+    <div class="view view-homepage-featured-block-4 view-id-homepage_featured_block_4 view-display-id-block view-dom-id-69038ad0a166f1cad509a0adb0052428">
         
   
   
@@ -990,7 +1036,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
 
     
   <div class="content">
-    <div class="view view-footer-banner- view-id-footer_banner_ view-display-id-block view-dom-id-820900cb2762412bcc97738034f20a32">
+    <div class="view view-footer-banner- view-id-footer_banner_ view-display-id-block view-dom-id-68bb99ab797017c123493eb9a82f9c4f">
         
   
   
@@ -1023,8 +1069,9 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
 </div>
 </div>
 </div>
+
 <div class="footer-bg">
-<div class="menu-footer-top"></div>
+<div class=""></div>
 <div class="col-sm-12 footer-01">
 
 	<div class="container">
@@ -1069,7 +1116,7 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
 
     
   <div class="content">
-    <div class="view view-copyrights view-id-copyrights view-display-id-block view-dom-id-c41dae20660fd350d8d13b0f75e3f7e9">
+    <div class="view view-copyrights view-id-copyrights view-display-id-block view-dom-id-8d87d421c3865bbd1903ae81060c7818">
         
   
   
@@ -1128,4 +1175,9 @@ Email id- <a href="mailto:cdhg-shil-meg@gov.in">cdhg-shil-meg[at]gov[dot]in</a><
 	</div>
 </div> 
 </div>  </body>
+</html>
+
+
+
+      </div>  </body>
 </html>
