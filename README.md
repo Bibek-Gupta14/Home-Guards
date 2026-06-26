@@ -82,7 +82,21 @@ npx http-server -p 8000 .
 
 ---
 
+## 🔗 Associated Portals & Resources
+
+| Portal / Authority Logo | Description / Link |
+| :---: | :--- |
+| [![National Portal of India](https://meghomeguards.gov.in/sites/default/files/styles/footer_logo/public/footer-004.jpg?itok=gLb2GYeT)](https://india.gov.in/) | **[National Portal of India](https://india.gov.in/)** – The official gateway to single-window information and services provided by the Indian government. |
+| [![Vidya Lakshmi Portal](https://meghomeguards.gov.in/sites/default/files/styles/footer_logo/public/footer-006.jpg?itok=1VI0HVCJ)](https://www.vidyalakshmi.co.in/Students/) | **[Vidya Lakshmi Portal](https://www.vidyalakshmi.co.in/Students/)** – A centralized portal for students seeking education loans and scholarships. |
+| [![Government of Meghalaya](https://meghomeguards.gov.in/sites/default/files/styles/footer_logo/public/footer-005.jpg?itok=AcixQw1i)](http://meghalaya.gov.in/megportal/) | **[Government of Meghalaya](http://meghalaya.gov.in/megportal/)** – State-level administrative hub and primary portal for departments, schemes, and official resources. |
+| [![Education for all in India](https://meghomeguards.gov.in/sites/default/files/styles/footer_logo/public/footer-003.jpg?itok=VubnXAa1)](http://www.educationforallinindia.com/) | **[Education for all in India](http://www.educationforallinindia.com/)** – Information channel for the Sarva Shiksha Abhiyan (SSA) educational initiative. |
+| [![NCERT](https://meghomeguards.gov.in/sites/default/files/styles/footer_logo/public/footer-002.jpg?itok=fqnUKBXW)](http://ncert.nic.in/) | **[NCERT](http://ncert.nic.in/)** – National Council of Educational Research and Training, defining curriculum frameworks and academic publications. |
+| [![MHRD](https://meghomeguards.gov.in/sites/default/files/styles/footer_logo/public/footer-001.jpg?itok=yqfZPqPP)](http://mhrd.gov.in/) | **[MHRD (Ministry of Education)](http://mhrd.gov.in/)** – National ministry overseeing human resource development and national education standards. |
+
+---
+
 ## 🛡️ Disclaimer
 
-> [!NOTE]
+**NOTE !!**
+
 > This repository is a frontend template representing the portal design for the Directorate of Civil Defence & Home Guards, Government of Meghalaya. Third-party style sheets, JavaScript libraries, icons, and official logos are retrieved dynamically from official government servers or validated CDNs to ensure compliance with the original content layout.
