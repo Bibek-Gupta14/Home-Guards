@@ -107,6 +107,29 @@
   border-right-color: #55331C !important;
 }
 
+/* RESPONSIVE SLIDESHOW/CAROUSEL OVERRIDES (HERO ONLY) */
+#views_slideshow_cycle_teaser_section_slidshow-block_1,
+#views_slideshow_cycle_teaser_section_slidshow-block_1 .views-slideshow-cycle-main-frame,
+#views_slideshow_cycle_teaser_section_slidshow-block_1 .views-slideshow-cycle-main-frame-row,
+#views_slideshow_cycle_teaser_section_slidshow-block_1 .views_slideshow_cycle_slide,
+#views_slideshow_cycle_teaser_section_slidshow-block_1 .views-slideshow-cycle-main-frame-row-item {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  overflow: hidden !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+}
+
+#views_slideshow_cycle_teaser_section_slidshow-block_1 .views-field-field-image img,
+#views_slideshow_cycle_teaser_section_slidshow-block_1 img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  display: block !important;
+}
+
+
 /* Image Gallery Prominent Appearance Overrides (3 side-by-side) */
 .field-name-field-gallery-thumbnail .field-items {
   display: flex !important;
@@ -223,6 +246,229 @@
 .view-photogallery .views-field-field-photo-gallery-chh .col-md-9 a:hover {
   color: #e07d3b !important;
 }
+
+/* GIGW ACCESSIBILITY HIGHLIGHT & COMPLIANCE OVERRIDES */
+
+/* Force all tables to be fully responsive */
+table, .table-responsive table {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  table-layout: auto !important;
+}
+.table-responsive {
+  border: none !important;
+  width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+/* 1. Accessibility Theme: Grey Mode */
+body.theme-grey {
+  filter: grayscale(100%) !important;
+}
+
+/* 2. Accessibility Theme: High-Contrast Black Mode */
+body.theme-black {
+  background-color: #000000 !important;
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+body.theme-black #page,
+body.theme-black .container,
+body.theme-black section,
+body.theme-black div,
+body.theme-black table,
+body.theme-black tr,
+body.theme-black td,
+body.theme-black th,
+body.theme-black footer,
+body.theme-black .footer-01,
+body.theme-black .footer-bg,
+body.theme-black .menu-bg,
+body.theme-black .top-header01,
+body.theme-black .news-box,
+body.theme-black .siderbartitle h2,
+body.theme-black .bgorange h2,
+body.theme-black .block-views h2,
+body.theme-black .about-home-bg h2,
+body.theme-black .ntrtnw h2,
+body.theme-black .news-box h2,
+body.theme-black .news-box2 h2 {
+  background-color: #000000 !important;
+  background: #000000 !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+/* Links and Highlighted text in Black Mode */
+body.theme-black a,
+body.theme-black span,
+body.theme-black strong,
+body.theme-black h1,
+body.theme-black h2,
+body.theme-black h3,
+body.theme-black h4,
+body.theme-black h5,
+body.theme-black h6 {
+  color: #ffffff !important;
+  text-decoration: underline !important;
+}
+
+/* Yellow Contrast for Active/Hover elements */
+body.theme-black a:hover,
+body.theme-black .active a,
+body.theme-black .tb-megamenu .nav > li > a:hover,
+body.theme-black .tb-megamenu .dropdown-menu li a:hover,
+body.theme-black .tb-megamenu-item.active > a,
+body.theme-black .horizontal-dropdown-menu .dropdown-item a:hover {
+  color: #ffff00 !important;
+  background-color: #222222 !important;
+  background: #222222 !important;
+  text-decoration: underline !important;
+}
+
+/* Form field border highlighting */
+body.theme-black input[type="text"],
+body.theme-black input[type="submit"],
+body.theme-black select {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+}
+body.theme-black input[type="submit"]:hover {
+  color: #ffff00 !important;
+  border-color: #ffff00 !important;
+}
+
+/* NAVBAR RESPONSIVENESS OVERRIDES FOR ALL VIEWPORTS */
+
+/* 1. Large Desktops (min-width: 1200px) */
+@media (min-width: 1200px) {
+  .menu-bg {
+    height: auto !important;
+    min-height: 44px !important;
+  }
+  .tb-megamenu, #cssmenu, .tb-megamenu .nav {
+    height: auto !important;
+  }
+  .tb-megamenu .nav {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .tb-megamenu .nav > li {
+    height: auto !important;
+    min-height: 44px !important;
+    float: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    border-right: 1px solid #3a2213 !important;
+  }
+  .tb-megamenu .nav > li > a {
+    padding: 10px 18px !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+  }
+  
+  /* Laptop viewports adjustment to keep menu items on a single row */
+  @media (max-width: 1361px) {
+    .tb-megamenu .nav > li > a {
+      padding: 10px 12px !important;
+      font-size: 13px !important;
+    }
+  }
+}
+
+/* 2. Mobile, Tablet & Mid-size Laptop Viewports (max-width: 1199px) */
+@media (max-width: 1199px) {
+  .menu-bg {
+    height: auto !important;
+    background-color: #55331C !important;
+  }
+  #cssmenu, .tb-megamenu {
+    height: auto !important;
+    width: 100% !important;
+  }
+  .tb-megamenu-button {
+    display: block !important;
+    margin: 5px 10px !important;
+    background: #422e1a !important;
+    border: 1px solid #3a2213 !important;
+    color: #ffffff !important;
+    float: none !important;
+  }
+  
+  /* Hide the navbar list by default on mobile, show when expanded */
+  .nav-collapse {
+    display: none !important;
+    height: auto !important;
+    clear: both !important;
+  }
+  .nav-collapse.in, .nav-collapse.open, .nav-collapse.collapse.in {
+    display: block !important;
+  }
+  
+  .tb-megamenu .nav {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .tb-megamenu .nav > li {
+    width: 100% !important;
+    border-right: none !important;
+    border-bottom: 1px solid #3a2213 !important;
+    display: block !important;
+    float: none !important;
+  }
+  .tb-megamenu .nav > li > a {
+    display: block !important;
+    width: 100% !important;
+    padding: 12px 15px !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Submenus stacking in mobile mode */
+  .tb-megamenu .dropdown-menu {
+    position: static !important;
+    float: none !important;
+    width: 100% !important;
+    box-shadow: none !important;
+    border: none !important;
+    display: none !important;
+    padding: 0 !important;
+  }
+  .tb-megamenu .dropdown.open > .dropdown-menu,
+  .tb-megamenu .dropdown.active > .dropdown-menu,
+  .tb-megamenu .dropdown-submenu.open > .dropdown-menu {
+    display: block !important;
+  }
+  
+  /* Nested Horizontal dropdown stacking */
+  .tb-megamenu-item.has-horizontal-dropdown .horizontal-dropdown-menu {
+    position: static !important;
+    display: none !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    box-shadow: none !important;
+    padding: 5px 15px !important;
+    border-radius: 0 !important;
+  }
+  .tb-megamenu-item.has-horizontal-dropdown.open .horizontal-dropdown-menu {
+    display: flex !important;
+  }
+}
+
+
 
 
 
