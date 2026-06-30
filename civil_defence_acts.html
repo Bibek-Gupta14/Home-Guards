@@ -303,6 +303,74 @@ $("a.style-g").attr("title","Black Theme");
 
     // Mobile submenu toggle trigger
     $('.tb-megamenu-nav .dropdown-toggle').on('click', function(e) {
+      if ($(window).width() <= 1199) {
+        var href = $(this).attr('href');
+        var parentLi = $(this).closest('.tb-megamenu-item');
+        if (parentLi.hasClass('dropdown') || parentLi.hasClass('dropdown-submenu') || parentLi.hasClass('has-horizontal-dropdown')) {
+          e.preventDefault();
+          e.stopPropagation();
+          parentLi.toggleClass('open');
+        }
+      }
+    });
+
+    // Megamenu click redirection bypass
+    $('.tb-megamenu-nav').on('click', 'a', function(e) {
+      if ($(window).width() > 1199 || !$(this).hasClass('dropdown-toggle')) {
+        var href = $(this).attr('href');
+        if (href && href !== '#' && !href.startsWith('javascript:')) {
+          if ($(this).closest('.dropdown-menu').length > 0 || 
+              $(this).closest('.horizontal-dropdown-menu').length > 0 || 
+              !$(this).hasClass('dropdown-toggle')) {
+            e.preventDefault();
+            e.stopPropagation();
+            window.location.href = href;
+          }
+        }
+      }
+    });
+  });
+})(jQuery);
+
+</script>
+<script>
+
+(function($) {
+  $(document).ready(function() {
+    // GIGW Local Style Switcher Logic
+    var savedTheme = localStorage.getItem('selected-theme');
+    if (savedTheme === 'grey') {
+      $('body').addClass('theme-grey');
+    } else if (savedTheme === 'black') {
+      $('body').addClass('theme-black');
+    }
+
+    $('.style-newsite').attr('href', 'javascript:void(0);').on('click', function(e) {
+      e.preventDefault();
+      $('body').removeClass('theme-black').addClass('theme-grey');
+      localStorage.setItem('selected-theme', 'grey');
+    });
+
+    $('.style-newstyle').attr('href', 'javascript:void(0);').on('click', function(e) {
+      e.preventDefault();
+      $('body').removeClass('theme-grey theme-black');
+      localStorage.setItem('selected-theme', 'default');
+    });
+
+    $('.style-g').attr('href', 'javascript:void(0);').on('click', function(e) {
+      e.preventDefault();
+      $('body').removeClass('theme-grey').addClass('theme-black');
+      localStorage.setItem('selected-theme', 'black');
+    });
+
+    // Mobile menu toggle trigger
+    $('.tb-megamenu-button').on('click', function(e) {
+      e.preventDefault();
+      $('.nav-collapse').toggleClass('open');
+    });
+
+    // Mobile submenu toggle trigger
+    $('.tb-megamenu-nav .dropdown-toggle').on('click', function(e) {
       if ($(window).width() <= 991) {
         var href = $(this).attr('href');
         var parentLi = $(this).closest('.tb-megamenu-item');
@@ -1188,10 +1256,10 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
     
   <div class="content">
     <div class="menu-block-wrapper menu-block-9 menu-name-menu-footer-bottom-link parent-mlid-0 menu-level-1">
-  <ul class="menu"><li class="first leaf menu-mlid-914"><a href="/accessibility-statement">Accessibility Statement</a></li>
-<li class="leaf menu-mlid-953"><a href="/disclaimer">Disclaimer</a></li>
+  <ul class="menu"><li class="first leaf menu-mlid-914"><a href="accessibility.html">Accessibility Statement</a></li>
+<li class="leaf menu-mlid-953"><a href="disclaimer.html">Disclaimer</a></li>
 <li class="leaf menu-mlid-951"><a href="/copyright-policy">Copyright Policy</a></li>
-<li class="leaf menu-mlid-918"><a href="/sitemap">Site Map</a></li>
+<li class="leaf menu-mlid-918"><a href="sitemap.html">Site Map</a></li>
 <li class="leaf menu-mlid-947"><a href="/feedback">Feedback</a></li>
 <li class="leaf menu-mlid-952"><a href="/hyperlink-policy">Hyperlink Policy</a></li>
 <li class="leaf menu-mlid-950"><a href="/privacy-policy">Privacy Policy</a></li>
