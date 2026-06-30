@@ -37,6 +37,19 @@ Welcome to the modernized portal of the **Directorate of Civil Defence & Home Gu
 
 ---
 
+## 🚀 Recent Modernization Updates (GIGW & Responsiveness Overhaul)
+
+We have performed extensive patches and layout compliance improvements across the portal:
+- **📱 Fully Responsive Navbar**: Redesigned breakpoints and transition queries (`custom.css`) to ensure the navigation header collapses properly without wrapping or breaking across mobile (`320px` to `370px`), tablet (`768px+`), and laptop (`1024px` to `1190px`) screen widths.
+- **🗺️ Integrated Sitemap (`sitemap.html`)**: Added a nested structured sitemap list detailing all accessibility pages, wings, and medals. The sitemap matches the site design and includes standard floats and sidebar positioning.
+- **🎨 Unified Photo Card Transitions**: Configured `old_photos.html` and `new_photos.html` category items so the entire `.field-item` card (border, shadow, translation) animates together on hover rather than just the image alone.
+- **♿ WCAG Accessibility & Contrast Compliance**:
+  - Replaced browser-default blue outline rings on focus with a custom **Accessible Keyboard Focus Outline** (`2px solid #55331C` for standard style, bright yellow `#ffff00` for high-contrast dark mode). Focus indicators only show during keyboard navigation (`:focus-visible`), keeping mouse clicks clean.
+  - Stripped invalid trailing comment artifacts (`//--><!]]>`) on all text resizer scripts.
+  - Set explicit `tabindex` and semantic HTML structures across tables and headers.
+
+---
+
 ## 📂 Site Map & Repository Structure
 
 Below is a directory walkthrough representing the local portal architecture:
@@ -55,6 +68,29 @@ Below is a directory walkthrough representing the local portal architecture:
 | [`notice_board.html`](file:///c:/Users/KIIT0001/OneDrive/Desktop/NIC/Home%20Guards/notice_board.html) | **Notice Board & Circulars** – Downloadable PDFs, recruitment circulars, and tender listings. |
 | [`news.html`](file:///c:/Users/KIIT0001/OneDrive/Desktop/NIC/Home%20Guards/news.html) | **Press & Media** – Highlights of activities, safety drills, community events, and state awards. |
 | [`services.html`](file:///c:/Users/KIIT0001/OneDrive/Desktop/NIC/Home%20Guards/services.html) | **Citizen Charters & Services** – Details on public training registrations, enrollment forms, and emergency dispatch services. |
+| [`sitemap.html`](file:///c:/Users/KIIT0001/OneDrive/Desktop/NIC/Home%20Guards/sitemap.html) | **Sitemap Page** – A hierarchically structured navigation index for all wings, documents, and medals. |
+| [`accessibility.html`](file:///c:/Users/KIIT0001/OneDrive/Desktop/NIC/Home%20Guards/accessibility.html) | **Accessibility Statement** – General state compliance document defining accessible usage criteria. |
+| [`accessibility_options.html`](file:///c:/Users/KIIT0001/OneDrive/Desktop/NIC/Home%20Guards/accessibility_options.html) | **Accessibility Options** – Setup options page outlining resizers, styling helpers, and screen reading settings. |
+| [`disclaimer.html`](file:///c:/Users/KIIT0001/OneDrive/Desktop/NIC/Home%20Guards/disclaimer.html) | **Disclaimer Notice** – Legal disclosures regarding state-hosted data, resources, and links. |
+| [`whos_who.html`](file:///c:/Users/KIIT0001/OneDrive/Desktop/NIC/Home%20Guards/whos_who.html) | **Who's Who Directory** – Executive department directory mapping leadership officials and contacts. |
+| [`photo_gallery.html`](file:///c:/Users/KIIT0001/OneDrive/Desktop/NIC/Home%20Guards/photo_gallery.html) | **Photo Gallery Categories** – Main entry page directing users to modern/old image collection sub-directories. |
+| [`old_photos.html`](file:///c:/Users/KIIT0001/OneDrive/Desktop/NIC/Home%20Guards/old_photos.html) | **Historical Photos** – Photo library archiving historic state commands, guards, and services. |
+| [`new_photos.html`](file:///c:/Users/KIIT0001/OneDrive/Desktop/NIC/Home%20Guards/new_photos.html) | **Modern Activity Photos** – Highlighting current active trainings, rescue drills, and state events. |
+| [`programmes_schemes.html`](file:///c:/Users/KIIT0001/OneDrive/Desktop/NIC/Home%20Guards/programmes_schemes.html) | **State Schemes** – Outlines state-sponsored civic initiatives, training schemes, and relief projects. |
+| [`recruitment.html`](file:///c:/Users/KIIT0001/OneDrive/Desktop/NIC/Home%20Guards/recruitment.html) | **Recruitment Center** – Direct access listings for volunteer enrollment notices and candidate lists. |
+| [`rti.html`](file:///c:/Users/KIIT0001/OneDrive/Desktop/NIC/Home%20Guards/rti.html) | **RTI Act Details** – General guidelines, contacts, and downloadable forms for RTI submissions. |
+| [`tenders.html`](file:///c:/Users/KIIT0001/OneDrive/Desktop/NIC/Home%20Guards/tenders.html) | **Tender Center** – Quick access link/page for active department tenders and quotes. |
+| [`internal_complaints.html`](file:///c:/Users/KIIT0001/OneDrive/Desktop/NIC/Home%20Guards/internal_complaints.html) | **Internal Complaints Committee** – Setup data and contact directory for sexual harassment redressal cells. |
+| [`awards_excellence.html`](file:///c:/Users/KIIT0001/OneDrive/Desktop/NIC/Home%20Guards/awards_excellence.html) | **Excellence Awards** – Honors and details regarding recipients of Meghalaya Day Excellence Awards. |
+| [`awards_dg_mha.html`](file:///c:/Users/KIIT0001/OneDrive/Desktop/NIC/Home%20Guards/awards_dg_mha.html) | **DG MHA Awards** – Commendation Disc recipients designated by the Ministry of Home Affairs. |
+| [`awards_dg_meghalaya.html`](file:///c:/Users/KIIT0001/OneDrive/Desktop/NIC/Home%20Guards/awards_dg_meghalaya.html) | **DG Meghalaya Awards** – Commendation Disc recipients designated by the state Directorate. |
+| [`medal_distinguished.html`](file:///c:/Users/KIIT0001/OneDrive/Desktop/NIC/Home%20Guards/medal_distinguished.html) | **Distinguished Service Medal** – Directory of President's Medal for Distinguished Service recipients. |
+| [`medal_gallantry.html`](file:///c:/Users/KIIT0001/OneDrive/Desktop/NIC/Home%20Guards/medal_gallantry.html) | **Gallantry Medals** – Recipient directory for Home Guards & Civil Defence Medal for Gallantry. |
+| [`medal_meritorious.html`](file:///c:/Users/KIIT0001/OneDrive/Desktop/NIC/Home%20Guards/medal_meritorious.html) | **Meritorious Service Medal** – Recipient directory for Meritorious Service Medals. |
+| [`medal_governor.html`](file:///c:/Users/KIIT0001/OneDrive/Desktop/NIC/Home%20Guards/medal_governor.html) | **Governor's Medal** – Recipient directory for Meghalaya Governor's CD & HG Medal. |
+| [`medal_cm_disaster.html`](file:///c:/Users/KIIT0001/OneDrive/Desktop/NIC/Home%20Guards/medal_cm_disaster.html) | **CM's Disaster Medal** – Recipient directory for Chief Minister's Disaster Response Medal. |
+| [`medal_meritorious_service.html`](file:///c:/Users/KIIT0001/OneDrive/Desktop/NIC/Home%20Guards/medal_meritorious_service.html) | **Fire Service Meritorious Medal** – Recipient directory for Fire Service Medal for Meritorious Service. |
+
 
 ---
 
