@@ -557,9 +557,150 @@ body.theme-black .theme-btn-lg {
 }
 
 body.theme-black .theme-btn-lg:hover {
-  background-color: #ffff00 !important;
+  background-color: #ff0000 !important;
+  color: #000000 !important;
+}\n\n/* PHOTO GALLERY CARD & CAPTION STYLING */
+.field-name-field-gallery-thumbnail .field-items {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 15px 10px !important;
+  justify-content: center !important;
+  width: 100% !important;
+}
+
+.gallery-card-wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  width: 100% !important;
+  max-width: 320px !important;
+  margin: 0 auto !important;
+}
+
+.field-name-field-gallery-thumbnail .field-item {
+  width: 100% !important;
+  background: #ffffff !important;
+  border: 2px solid #55331C !important;
+  border-radius: 8px !important;
+  padding: 0px !important; /* Image fills card entirely */
+  overflow: hidden !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.gallery-card-wrapper:hover .field-item {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 8px 16px rgba(85, 51, 28, 0.15) !important;
+  border-color: #55331C !important;
+}
+
+.field-name-field-gallery-thumbnail .field-item img {
+  width: 100% !important;
+  height: 230px !important;
+  object-fit: cover !important;
+  display: block !important;
+  transition: transform 0.3s ease !important;
+}
+
+.gallery-card-wrapper:hover .field-item img {
+  transform: scale(1.05) !important;
+}
+
+.field-name-field-gallery-thumbnail .field-item a {
+  display: block !important;
+  width: 100% !important;
+}
+
+.field-name-field-gallery-thumbnail .image-caption {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #55331C !important;
+  line-height: 1.4 !important;
+  margin-top: 12px !important;
+  font-family: sans-serif !important;
+  text-align: center !important;
+  word-wrap: break-word !important;
+  width: 100% !important;
+}
+
+/* Black theme overrides */
+body.theme-black .field-name-field-gallery-thumbnail .field-item {
+  background: #000000 !important;
+  border-color: #ffff00 !important;
+  box-shadow: none !important;
+}
+
+body.theme-black .field-name-field-gallery-thumbnail .field-item:hover {
+  border-color: #ffffff !important;
+  box-shadow: 0 0 10px #ffff00 !important;
+}
+
+body.theme-black .field-name-field-gallery-thumbnail .image-caption {
+  color: #ffff00 !important;
+}
+
+/* Grey theme overrides */
+body.theme-grey .field-name-field-gallery-thumbnail .field-item {
+  background: #eaeaea !important;
+  border-color: #777777 !important;
+}
+
+body.theme-grey .field-name-field-gallery-thumbnail .image-caption {
   color: #000000 !important;
 }
 
+@media (max-width: 991px) {
+  .field-name-field-gallery-thumbnail .field-items {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .field-name-field-gallery-thumbnail .field-items {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Mobile Megamenu Mismatched Color Fix */
+@media (max-width: 991px) {
+  .tb-megamenu .nav-collapse,
+  .tb-megamenu .nav-collapse .nav,
+  .tb-megamenu .nav-collapse .nav > li,
+  .tb-megamenu .nav-collapse .nav > li > a,
+  .tb-megamenu .nav-collapse .dropdown-menu,
+  .tb-megamenu .nav-collapse .dropdown-menu a,
+  .tb-megamenu .nav-collapse .dropdown-toggle,
+  .tb-megamenu .nav-collapse .tb-megamenu-item {
+    background-color: #55331C !important;
+    background: #55331C !important;
+    color: #ffffff !important;
+    border-color: #422e1a !important;
+  }
+
+  .tb-megamenu .nav-collapse .nav > li > a:hover,
+  .tb-megamenu .nav-collapse .nav > li.active > a,
+  .tb-megamenu .nav-collapse .dropdown-toggle:hover,
+  .tb-megamenu .nav-collapse .dropdown-menu a:hover,
+  .tb-megamenu .nav-collapse .tb-megamenu-item:hover > a {
+    background-color: #3b2212 !important;
+    background: #3b2212 !important;
+    color: #ffffff !important;
+  }
+}
 
 
+/* GLOBAL RESPONSIVE TABLES (NIC QA FIX) */
+.region-content table {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  border-collapse: collapse !important;
+  margin-bottom: 20px !important;
+}
+
+.region-content table th, 
+.region-content table td {
+  white-space: nowrap !important;
+}
