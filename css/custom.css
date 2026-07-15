@@ -51,19 +51,33 @@
 }
 
 .tb-megamenu-item.has-horizontal-dropdown .horizontal-dropdown-menu .dropdown-item a:hover {
-  background-color: #55331C !important;
-  color: #ffffff !important;
+  background-color: #dbc09e !important;
+  color: #1e0d01 !important;
 }
 
-/* Style overrides to change primary teal theme to #55331C on all pages */
+/* Style overrides to change primary theme to #d3bca9 on all pages */
 .menu-bg, .tb-megamenu, #cssmenu, .tb-megamenu .nav {
-  background-color: #55331C !important;
+  background-color: #d3bca9 !important;
+}
+.tb-megamenu .nav > li > a {
+  color: #3b2212 !important;
+  transition: background-color 0.2s ease, color 0.2s ease !important;
+}
+.tb-megamenu .nav > li > a:hover,
+.tb-megamenu .nav > li:hover > a {
+  background-color: #3b2212 !important;
+  background: #3b2212 !important;
+  color: white !important;
 }
 .menu-bg-top {
-  border-bottom: 5px solid #55331C !important;
+  border-bottom: 5px solid #d3bca9 !important;
 }
 .top-header01 {
-  background-color: #55331C !important;
+  background-color: #d3bca9 !important;
+  color: #3b2212 !important;
+}
+.top-header01 a {
+  color: #3b2212 !important;
 }
 .tb-megamenu .dropdown-menu,
 .tb-megamenu .dropdown-menu .mega-nav,
@@ -71,15 +85,15 @@
 .tb-megamenu .tb-megamenu-submenu,
 .tb-megamenu .nav-child {
   background-color: #422e1a !important;
-  border-color: #55331C !important;
+  border-color: #d3bca9 !important;
 }
 .tb-megamenu .dropdown-menu li a:hover,
 .tb-megamenu .dropdown-menu .mega-nav li a:hover,
 .tb-megamenu .dropdown-menu .active a,
 .tb-megamenu .mega-nav .active a,
 .tb-megamenu .tb-megamenu-item.active > a {
-  background-color: #1e0d01 !important;
-  color: #ffffff !important;
+  background-color: #ad8d65 !important;
+  color: #1e0d01 !important;
 }
 
 /* Sidebar, Section Blocks, and Footer Overrides */
@@ -90,21 +104,29 @@
 .ntrtnw h2,
 .news-box h2,
 .news-box2 h2 {
-  background-color: #55331C !important;
-  background: #55331C !important;
-  color: #ffffff !important;
+  background-color: #d3bca9 !important;
+  background: #d3bca9 !important;
+  color: #3b2212 !important;
 }
 .footer-01,
 .footer-bg,
 .menu-footer-top {
-  background-color: #55331C !important;
-  background: #55331C !important;
+  background-color: #d3bca9 !important;
+  background: #d3bca9 !important;
+  color: #3b2212 !important;
+}
+.footer-01 a,
+.footer-01 p,
+.footer-01 div,
+.menu-footer-top a {
+  color: #3b2212 !important;
 }
 .newsleft,
 .views-slideshow-controls-bottom {
-  background-color: #55331C !important;
-  background: #55331C !important;
-  border-right-color: #55331C !important;
+  background-color: #d3bca9 !important;
+  background: #d3bca9 !important;
+  border-right-color: #d3bca9 !important;
+  color: #3b2212 !important;
 }
 
 /* RESPONSIVE SLIDESHOW/CAROUSEL OVERRIDES (HERO ONLY) */
@@ -145,14 +167,14 @@
   box-sizing: border-box !important;
   padding: 8px !important;
   background-color: #ffffff !important;
-  border: 2px solid #55331C !important;
+  border: 2px solid #d3bca9 !important;
   border-radius: 6px !important;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
   transition: all 0.25s ease-in-out !important;
 }
 
 .field-name-field-gallery-thumbnail .field-item:hover {
-  border-color: #55331C !important;
+  border-color: #d3bca9 !important;
   box-shadow: 0 8px 20px rgba(85, 51, 28, 0.35) !important;
   transform: translateY(-4px) !important;
 }
@@ -200,7 +222,7 @@
   flex-direction: column !important;
   padding: 15px !important;
   background-color: #ffffff !important;
-  border: 2px solid #55331C !important;
+  border: 2px solid #d3bca9 !important;
   border-radius: 8px !important;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
   transition: all 0.25s ease-in-out !important;
@@ -243,7 +265,7 @@
   font-family: inherit !important;
   font-size: 18px !important;
   font-weight: bold !important;
-  color: #55331C !important;
+  color: #d3bca9 !important;
   text-decoration: none !important;
   transition: color 0.2s ease !important;
 }
@@ -394,7 +416,7 @@ body.theme-black input[type="submit"]:hover {
 @media (max-width: 1199px) {
   .menu-bg {
     height: auto !important;
-    background-color: #55331C !important;
+    background-color: #d3bca9 !important;
   }
   #cssmenu, .tb-megamenu {
     height: auto !important;
@@ -493,7 +515,7 @@ body.theme-black input[type="submit"]:hover {
   margin-bottom: 6px !important;
 }
 .sitemap-tree a {
-  color: #55331C !important;
+  color: #d3bca9 !important;
   text-decoration: none !important;
   font-weight: 600 !important;
   transition: color 0.2s ease-in-out !important;
@@ -516,7 +538,7 @@ body.theme-black .sitemap-tree a:hover {
 }
 
 *:focus-visible {
-  outline: 2px solid #55331C !important;
+  outline: 2px solid #d3bca9 !important;
   outline-offset: 2px !important;
 }
 
@@ -529,12 +551,12 @@ body.theme-black *:focus-visible {
 .theme-btn-lg {
   display: inline-block !important;
   padding: 10px 20px !important;
-  background-color: #55331C !important;
-  color: #ffffff !important;
+  background-color: #d3bca9 !important;
+  color: #3b2212 !important;
   font-size: 16px !important;
   font-weight: 600 !important;
   border-radius: 4px !important;
-  border: 2px solid #55331C !important;
+  border: 2px solid #d3bca9 !important;
   box-shadow: 0 4px 10px rgba(85, 51, 28, 0.2) !important;
   cursor: pointer !important;
   transition: all 0.25s ease-in-out !important;
@@ -580,7 +602,7 @@ body.theme-black .theme-btn-lg:hover {
 .field-name-field-gallery-thumbnail .field-item {
   width: 100% !important;
   background: #ffffff !important;
-  border: 2px solid #55331C !important;
+  border: 2px solid #d3bca9 !important;
   border-radius: 8px !important;
   padding: 0px !important; /* Image fills card entirely */
   overflow: hidden !important;
@@ -591,7 +613,7 @@ body.theme-black .theme-btn-lg:hover {
 .gallery-card-wrapper:hover .field-item {
   transform: translateY(-5px) !important;
   box-shadow: 0 8px 16px rgba(85, 51, 28, 0.15) !important;
-  border-color: #55331C !important;
+  border-color: #d3bca9 !important;
 }
 
 .field-name-field-gallery-thumbnail .field-item img {
@@ -614,7 +636,7 @@ body.theme-black .theme-btn-lg:hover {
 .field-name-field-gallery-thumbnail .image-caption {
   font-size: 13px !important;
   font-weight: 600 !important;
-  color: #55331C !important;
+  color: #d3bca9 !important;
   line-height: 1.4 !important;
   margin-top: 12px !important;
   font-family: sans-serif !important;
@@ -671,9 +693,9 @@ body.theme-grey .field-name-field-gallery-thumbnail .image-caption {
   .tb-megamenu .nav-collapse .dropdown-menu a,
   .tb-megamenu .nav-collapse .dropdown-toggle,
   .tb-megamenu .nav-collapse .tb-megamenu-item {
-    background-color: #55331C !important;
-    background: #55331C !important;
-    color: #ffffff !important;
+    background-color: #d3bca9 !important;
+    background: #d3bca9 !important;
+    color: #3b2212 !important;
     border-color: #422e1a !important;
   }
 
@@ -704,3 +726,481 @@ body.theme-grey .field-name-field-gallery-thumbnail .image-caption {
 .region-content table td {
   white-space: nowrap !important;
 }
+
+/* Remove borders/separators between menu options */
+.tb-megamenu .nav > li,
+.tb-megamenu .nav > li > a,
+.tb-megamenu .dropdown-menu li,
+.tb-megamenu .dropdown-menu li a,
+.tb-megamenu .mega-nav li,
+.tb-megamenu .mega-nav li a,
+.tb-megamenu .tb-megamenu-item {
+  border: none !important;
+  border-right: none !important;
+  border-left: none !important;
+  box-shadow: none !important;
+}
+
+/* Rounded borders for Megamenu containers and options */
+.menu-bg, .tb-megamenu, #cssmenu {
+  border-radius: 6px !important;
+}
+
+.tb-megamenu .dropdown-menu,
+.tb-megamenu .dropdown-menu .mega-nav,
+.tb-megamenu .mega-dropdown-inner,
+.tb-megamenu .tb-megamenu-submenu,
+.tb-megamenu .nav-child,
+.tb-megamenu-item.has-horizontal-dropdown .horizontal-dropdown-menu {
+  border-radius: 6px !important;
+}
+
+.tb-megamenu .dropdown-menu li a,
+.tb-megamenu .dropdown-menu li a:hover,
+.tb-megamenu-item.has-horizontal-dropdown .horizontal-dropdown-menu .dropdown-item a,
+.tb-megamenu .nav > li > a,
+.tb-megamenu .nav > li > a:hover,
+.tb-megamenu .nav > li.active > a,
+.tb-megamenu .nav > li.active-trail > a {
+  border-radius: 4px !important;
+}
+
+/* Force all dropdown caret arrows to be black */
+.tb-megamenu .caret,
+.tb-megamenu .nav > li > a .caret,
+.tb-megamenu .nav > li > a:hover .caret,
+.tb-megamenu .nav > li.active .caret,
+.tb-megamenu .nav > li.active-trail .caret {
+  border-top-color: #000000 !important;
+  border-bottom-color: #000000 !important;
+  color: #000000 !important;
+}
+
+/* Remove underlines on megamenu hover options */
+.tb-megamenu a:hover,
+.tb-megamenu li a:hover,
+.tb-megamenu .nav > li > a:hover,
+.tb-megamenu .dropdown-menu li a:hover,
+.tb-megamenu .mega-nav li a:hover,
+.tb-megamenu-item.has-horizontal-dropdown .horizontal-dropdown-menu .dropdown-item a:hover {
+  text-decoration: none !important;
+}
+
+/* Smooth transition animations for megamenu options */
+.tb-megamenu a,
+.tb-megamenu li a,
+.tb-megamenu .nav > li > a,
+.tb-megamenu .dropdown-menu li a,
+.tb-megamenu .mega-nav li a,
+.tb-megamenu-item.has-horizontal-dropdown .horizontal-dropdown-menu .dropdown-item a {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Slight vertical lift on hover with shadow expansion */
+.tb-megamenu .nav > li > a:hover,
+.tb-megamenu .dropdown-menu li a:hover,
+.tb-megamenu-item.has-horizontal-dropdown .horizontal-dropdown-menu .dropdown-item a:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Scale press animation on click */
+.tb-megamenu a:active,
+.tb-megamenu li a:active {
+  transform: scale(0.97) !important;
+}
+
+/* Accessibility bar text color overrides for readability */
+.top-header01,
+.top-header01 a,
+.top-header01 span {
+  color: #211103 !important; /* Make links and text dark brown/black for contrast */
+}
+
+/* Ensure 'Text Resize' heading is colored black */
+.top-header01 .block-text-resize h2,
+.top-header01 h2 {
+  color: #000000 !important;
+}
+
+/* Text Resize buttons (options) styling: white text on dark background */
+.top-header01 .changer {
+  display: inline-block !important;
+  padding: 2px 2px !important;
+  background-color: #3b2212 !important;
+  color: #ffffff !important; /* White text for options */
+  border: 1px solid #3b2212 !important;
+  border-radius: 4px !important;
+  font-weight: bold !important;
+  text-decoration: none !important;
+  margin: 0 2px !important;
+  margin-top: -6px !important; /* Move options slightly up */
+  vertical-align: middle !important;
+  transition: all 0.2s ease !important;
+}
+
+.top-header01 .changer:hover {
+  background-color: #ffffff !important;
+  color: #3b2212 !important;
+}
+
+/* Hindi translation button */
+
+
+.top-header01 .button.local:hover {
+  background-color: #ffffff !important;
+  color: #3b2212 !important;
+}
+
+/* Style Switcher links representation as actual colored swatches */
+.top-header01 .style-switcher {
+  display: inline-block !important;
+  width: 20px !important;
+  height: 20px !important;
+  line-height: 22px !important;
+  text-align: top !important;
+  border-radius: 4px !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+  font-size: 14px !important;
+  margin-top: -2px !important;
+}
+
+/* Grey theme swatch */
+.top-header01 .style-newsite {
+  color: #ffffff !important;
+}
+
+/* Default theme swatch */
+.top-header01 .style-newstyle {
+  color: #3b2212 !important;
+}
+
+/* Black theme swatch */
+.top-header01 .style-g {
+  background-color: #000000 !important;
+  color: #ffff00 !important;
+  border-color: #ffff00 !important;
+}
+
+/* Fixed Facebook Icon styling */
+.fixed-facebook-icon {
+  position: fixed !important;
+  right: 0 !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 999999 !important;
+  background-color: #0081FB  !important; /* Premium brand theme dark brown */
+  color: #ffffff !important; /* White color by default */
+  width: 50px !important;
+  height: 50px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-top-left-radius: 6px !important;
+  border-bottom-left-radius: 6px !important;
+  border-radius: 40% !important;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+.fixed-facebook-icon svg {
+  transition: transform 0.3s ease !important;
+}
+
+/* Hover effects */
+.fixed-facebook-icon:hover {
+  background-color: #3b5998 !important; /* Classic Facebook blue on hover */
+  color: #ffffff !important;
+  padding-right: 8px !important; /* Slide out slightly */
+  width: 48px !important;
+  box-shadow: -4px 0 15px rgba(59, 89, 152, 0.4) !important;
+}
+
+.fixed-facebook-icon:hover svg {
+  transform: scale(1.15) rotate(-8deg) !important;
+}
+
+/* Responsive considerations for mobile screens */
+@media (max-width: 768px) {
+  .fixed-facebook-icon {
+    width: 38px !important;
+    height: 38px !important;
+  }
+  .fixed-facebook-icon:hover {
+    width: 42px !important;
+    padding-right: 4px !important;
+  }
+}
+
+/* Custom 3-Column Footer Styling */
+.footer-01 {
+  background-color:#D3BCA9 !important; /* Deep dark brown for footer bg */
+  color: #ffffff !important;
+  padding: 32px 0 10px 0 !important; /* Reduced padding from 40px/20px */
+}
+
+.footer02 {
+  margin-bottom: 5px !important; /* Reduced margin from 25px */
+}
+
+.footer-column {
+  margin-bottom: 5px !important; /* Reduced margin from 20px */
+  text-align: left !important;
+}
+
+.footer-column h3 {
+  color: #3B2212 !important; /* Theme accent color */
+  font-size: 18px !important;
+  font-weight: bold !important;
+  margin-top: 0 !important;
+  margin-bottom: 10px !important; /* Reduced margin from 20px */
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  border-bottom: 2px solid #d3bca9 !important;
+  padding-bottom: 4px !important; /* Reduced padding from 8px */
+  display: inline-block !important;
+}
+
+.footer-contact p {
+  color: #3B2212 !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  margin-bottom: 12px !important;
+  display: flex !important;
+  align-items: flex-start !important;
+}
+
+.footer-contact p i {
+  color: #3B2212 !important;
+  margin-right: 10px !important;
+  margin-top: 4px !important;
+  font-size: 16px !important;
+}
+
+.footer-links ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px !important;
+}
+
+.footer-links ul li a {
+  color: #3B2212 !important;
+  text-decoration: none !important;
+  font-size: 14px !important;
+  transition: all 0.25s ease !important;
+  display: inline-block !important;
+}
+
+.footer-links ul li a:hover {
+  color: #ffffff !important;
+  transform: translateX(4px) !important;
+  text-decoration: none !important;
+}
+
+.footer-map .map-container {
+  border: 3px solid #d3bca9 !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Styling for top-level footer links row (Help, Sitemap, Accessibility) */
+.footer-top-links-row {
+  margin-bottom: 15px !important; /* Reduced margin from 25px */
+  border-bottom: 1px solid rgba(211, 188, 169, 0.15) !important;
+  padding-bottom: 10px !important; /* Reduced padding from 20px */
+}
+
+.footer-top-links-row ul.menu {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+}
+
+.footer-top-links-row ul.menu li {
+  margin: 0 12px 10px 12px !important;
+  padding: 0 !important;
+  border: none !important; /* Remove separation borders */
+}
+
+.footer-top-links-row ul.menu li::after {
+  content: "" !important; /* Remove divider pipes/slashes if generated */
+  display: none !important;
+}
+
+.footer-top-links-row ul.menu li a {
+  color: #3B2212 !important; /* Accent color matching project theme */
+  font-size: 14px !important; /* Clean font size */
+  font-weight: bold !important; /* Bold weight */
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+  background-color:#c9b09a !important;
+  margin-right: 1px !important;
+  border-radius: 10px;
+  padding: 15px 15px !important;
+}
+
+.footer-top-links-row ul.menu li a:hover {
+  background-color: #3B2212 !important;
+  transition: background-color 1s ease !important;  
+}
+
+.footer-top-links-row ul.menu li a:hover {
+  color: #ffffff !important;
+}
+
+/* Ensure no default border separators display from parent theme style */
+.region-footer-menu {
+  border-top: none !important;
+  padding-top: 0 !important;
+}
+.region-footer-menu ul li,
+.region-footer-menu ul li a {
+  border-left: none !important;
+  border-right: none !important;
+  padding: 0 !important;
+}
+
+/* Reduce spacing for last updated and validation badges row */
+.lstupd {
+  padding-top: 10px !important;
+  margin-top: 5px !important;
+  border-top: 1px solid rgba(59, 34, 18, 0.1) !important;
+}
+
+.lstupd .cssvalid {
+  margin-top: 5px !important;
+}
+
+/* Full Width 100vw Header 3-Logo Banner */
+.logo-full-width-container {
+  background-color: #ffffff !important; /* Clean white background */
+  border-bottom: 2px solid #3b2212 !important; /* Theme divider line */
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04) !important;
+  overflow: hidden !important;
+  display: block !important;
+}
+
+.logo-flex-row {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+.logo-item {
+  flex: 0 1 auto !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.logo-item.text-center {
+  justify-content: center !important;
+  flex: 1 1 auto !important;
+}
+
+.logo-item.text-right {
+  justify-content: flex-end !important;
+}
+
+.header-logo-img {
+  max-height: 105px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+/* Mobile & Tablet Responsiveness */
+@media (max-width: 992px) {
+  .header-logo-img {
+    max-height: 80px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-full-width-container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+  .header-logo-img {
+    max-height: 60px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-full-width-container {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+  }
+  .header-logo-img {
+    max-height: 42px !important;
+  }
+}
+
+/* Full Width Viewport Breakout for Menu-BG and its Inner Container */
+.menu-bg {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
+}
+
+.menu-bg .container {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+}
+
+.menu-bg .tb-megamenu {
+  width: 100% !important;
+}
+
+/* Center all menu items and make them equidistant */
+.tb-megamenu .nav {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  float: none !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+}
+
+.tb-megamenu .nav > li {
+  float: none !important;
+  display: inline-block !important;
+}
+
+.tb-megamenu .nav > li > a {
+  padding: 12px 18px !important; /* Unified padding for equidistant spacing */
+  text-align: center !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
