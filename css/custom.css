@@ -102,8 +102,8 @@
 .block-views h2,
 .about-home-bg h2,
 .ntrtnw h2,
-.news-box h2,
-.news-box2 h2 {
+.news-box .block h2,
+.news-box .block h2, .news-box2 h2 {
   background-color: #d3bca9 !important;
   background: #d3bca9 !important;
   color: #3b2212 !important;
@@ -315,14 +315,14 @@ body.theme-black .footer-01,
 body.theme-black .footer-bg,
 body.theme-black .menu-bg,
 body.theme-black .top-header01,
-body.theme-black .news-box,
+body.theme-black .news-box .block,
 body.theme-black .siderbartitle h2,
 body.theme-black .bgorange h2,
 body.theme-black .block-views h2,
 body.theme-black .about-home-bg h2,
 body.theme-black .ntrtnw h2,
-body.theme-black .news-box h2,
-body.theme-black .news-box2 h2 {
+body.theme-black .news-box .block h2,
+body.theme-black .news-box .block h2, .news-box2 h2 {
   background-color: #000000 !important;
   background: #000000 !important;
   color: #ffffff !important;
@@ -853,13 +853,15 @@ body.theme-grey .field-name-field-gallery-thumbnail .image-caption {
 }
 
 /* Highly Interactive, Modern CSS Cards for homepage blocks */
+.news-box .block,
 .news-box2,
 .ntrtnw,
+.tab-2-box,
 .tab-2-box2 {
-  background-color: #f5f2e2 !important;
-  border: 1px solid rgba(59, 34, 18, 0.12) !important; /* Micro-border */
+  background-color: #ffffff !important; /* Pure white card background matching mockup */
+  border: 1px solid rgba(0, 0, 0, 0.08) !important; /* Soft micro-border */
   border-radius: 12px !important;
-  box-shadow: 0 4px 15px rgba(219, 209, 204, 0.06) !important; /* Subtle drop shadow */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important; /* Soft, premium drop shadow */
   padding: 24px 20px !important;
   margin-bottom: 25px !important;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
@@ -873,23 +875,27 @@ body.theme-grey .field-name-field-gallery-thumbnail .image-caption {
 }
 
 /* Card Titles */
+.news-box .block h2,
 .news-box2 h2,
 .ntrtnw h2,
+.tab-2-box h2,
 .tab-2-box2 h2 {
   font-size: 20px !important;
   font-weight: 700 !important;
   color: #3b2212 !important;
   margin: 0 0 15px 0 !important;
   padding: 0 0 10px 0 !important;
-  border-bottom: 2px solid rgba(211, 188, 169, 0.4) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important; /* Thin divider line below title */
   background: transparent !important;
   transition: color 0.3s ease-in-out !important;
   position: relative !important;
 }
 
 /* Add minimal icons via pseudo-elements matching each card theme */
+.news-box .block h2::before,
 .news-box2 h2::before,
 .ntrtnw h2::before,
+.tab-2-box h2::before,
 .tab-2-box2 h2::before {
   font-family: "FontAwesome" !important;
   margin-right: 8px !important;
@@ -905,52 +911,64 @@ body.theme-grey .field-name-field-gallery-thumbnail .image-caption {
 .region-home-tab h2::before { content: "\f06e" !important; } /* Eye/Infocus */
 
 /* Hover States */
+.news-box .block:hover,
 .news-box2:hover,
 .ntrtnw:hover,
+.tab-2-box:hover,
 .tab-2-box2:hover {
   transform: translateY(-8px) !important; /* 3D Lift */
-  box-shadow: 0 12px 30px rgba(59, 34, 18, 0.15) !important; /* Deeper shadow */
+  box-shadow: 0 12px 30px rgba(59, 34, 18, 0.12) !important; /* Deeper shadow */
   border-color: #3b2212 !important; /* Highlight border */
-  background: linear-gradient(135deg, #ffffff 0%, #faf6f0 100%) !important; /* Subtle warm glow background */
+  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%) !important; /* Subtle warm white background on hover */
 }
 
 /* Hover effect on Titles */
+.news-box .block:hover h2,
 .news-box2:hover h2,
 .ntrtnw:hover h2,
+.tab-2-box:hover h2,
 .tab-2-box2:hover h2 {
   color: #ad8d65 !important;
 }
 
 /* List items inside cards styling */
-.news-box2 ul,
+.news-box .block ul, .region-district-pofile ul,
+.region-district-information ul,
 .ntrtnw ul,
-.tab-2-box2 ul {
+.tab-2-box, .tab-2-box2 ul {
   list-style: none !important;
   padding: 0 !important;
   margin: 0 !important;
   flex-grow: 1 !important;
 }
 
-.news-box2 ul li,
+.news-box .block ul, .region-district-pofile ul li,
+.region-district-information ul li,
 .ntrtnw ul li,
-.tab-2-box2 ul li,
-.news-box2 .item-lists,
+.tab-2-box, .tab-2-box2 ul li,
+.tab-2-box, .region-sectors-departments ul li,
 .tab-2-box2 .item-list-slider {
   padding: 8px 0 !important;
   border-bottom: 1px solid rgba(59, 34, 18, 0.05) !important;
   transition: transform 0.25s ease !important;
 }
 
-.news-box2 ul li:hover,
+.news-box .block ul, .region-district-pofile ul li:hover,
+.region-district-information ul li:hover,
+.tab-2-box2 .item-list-slider:hover,
+.news-box .block .item-list-slider:hover,
 .ntrtnw ul li:hover,
-.tab-2-box2 ul li:hover {
+.tab-2-box, .tab-2-box2 ul li:hover {
   transform: translateX(5px) !important; /* Slight slide on hover */
 }
 
-.news-box2 ul li a,
+.news-box .block ul, .region-district-pofile ul li a,
+.region-district-information ul li a,
+.tab-2-box2 .item-list-slider a,
+.news-box .block .item-list-slider a,
 .ntrtnw ul li a,
-.tab-2-box2 ul li a,
-.tab-2-box2 .newitem a {
+.tab-2-box, .tab-2-box2 ul li a,
+.tab-2-box, .tab-2-box2 .newitem a {
   color: #5a4030 !important;
   font-size: 14px !important;
   text-decoration: none !important;
@@ -958,25 +976,29 @@ body.theme-grey .field-name-field-gallery-thumbnail .image-caption {
   transition: color 0.2s ease !important;
 }
 
-.news-box2 ul li a:hover,
+.news-box .block ul, .news-box2 ul li a:hover,
 .ntrtnw ul li a:hover,
-.tab-2-box2 ul li a:hover,
-.tab-2-box2 .newitem a:hover {
+.tab-2-box, .tab-2-box2 ul li a:hover,
+.tab-2-box, .tab-2-box2 .newitem a:hover {
   color: #3b2212 !important;
   text-decoration: underline !important;
 }
 
 /* More + Links styling inside cards */
-.news-box2 .more-link,
+.news-box .block .more-link,
+.region-sectors-departments .more-link, .region-district-pofile .more-link,
+.region-district-information .more-link,
 .ntrtnw .more-link,
-.tab-2-box2 .more-link {
+.tab-2-box, .tab-2-box2 .more-link {  
   margin-top: 15px !important;
   text-align: right !important;
 }
 
-.news-box2 .more-link a,
+.news-box .block .more-link,
+.region-sectors-departments .more-link, .region-district-pofile .more-link a,
+.region-district-information .more-link a,
 .ntrtnw .more-link a,
-.tab-2-box2 .more-link a {
+.tab-2-box, .tab-2-box2 .more-link a {
   font-size: 13px !important;
   font-weight: bold !important;
   color: #ad8d65 !important;
@@ -988,9 +1010,10 @@ body.theme-grey .field-name-field-gallery-thumbnail .image-caption {
   transition: all 0.25s ease !important;
 }
 
-.news-box2:hover .more-link a,
+.news-box .block:hover, .region-district-pofile:hover .more-link a,
+.region-district-information:hover .more-link a,
 .ntrtnw:hover .more-link a,
-.tab-2-box2:hover .more-link a {
+.tab-2-box, .tab-2-box2:hover .more-link a {
   background-color: #ad8d65 !important;
   color: #ffffff !important;
 }
@@ -1338,32 +1361,342 @@ body.theme-grey .field-name-field-gallery-thumbnail .image-caption {
 }
 /* Responsive adjustments for homepage cards */
 @media (max-width: 992px) {
-  .news-box2,
+  .news-box .block,
+.news-box2,
   .ntrtnw,
-  .tab-2-box2 {
+  .tab-2-box, .tab-2-box2 {
     min-height: auto !important; /* Allow card height to adjust naturally to content */
     padding: 20px 16px !important; /* Tighter padding for tablet viewports */
   }
   
-  .news-box2 h2,
+  .news-box .block h2, .news-box2 h2,
   .ntrtnw h2,
-  .tab-2-box2 h2 {
+  .tab-2-box, .tab-2-box2 h2 {
     font-size: 18px !important; /* Scale down title size */
   }
 }
 
 @media (max-width: 768px) {
   /* Spacing and stacking overrides on mobile viewports */
-  .news-box2,
+  .news-box .block,
+.news-box2,
   .ntrtnw,
-  .tab-2-box2 {
+  .tab-2-box, .tab-2-box2 {
     margin-bottom: 20px !important;
     padding: 16px 14px !important; /* Tight padding for small screens */
   }
   
-  .news-box2 h2,
+  .news-box .block h2, .news-box2 h2,
   .ntrtnw h2,
-  .tab-2-box2 h2 {
+  .tab-2-box, .tab-2-box2 h2 {
     font-size: 16px !important;
   }
+}
+
+/* Welcome to Directorate section split layout styling matching reference image */
+#maincontent .home-3-box-content {
+  background-color: #eeeeee !important; /* Light grey background matching reference */
+  border-radius: 12px !important;
+  padding: 40px 30px !important;
+  border: none !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+}
+
+.welcome-split-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+}
+
+.welcome-text-col {
+  padding-right: 20px !important;
+}
+
+.welcome-title {
+  font-size: 32px !important; /* Big and bold title */
+  font-weight: 800 !important;
+  color: #1a1a1a !important; /* Dark text */
+  margin-top: 0 !important;
+  margin-bottom: 12px !important;
+  line-height: 1.2 !important;
+}
+
+.welcome-subtitle {
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  color: #555555 !important;
+  margin-bottom: 15px !important;
+}
+
+.welcome-description {
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  color: #666666 !important;
+  margin-bottom: 25px !important;
+}
+
+.welcome-read-more-btn {
+  display: inline-block !important;
+  background-color: #333333 !important; /* Dark solid button */
+  color: #ffffff !important;
+  padding: 12px 28px !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  text-decoration: none !important;
+  border-radius: 4px !important;
+  transition: background-color 0.25s ease !important;
+  text-transform: capitalize !important;
+  margin-bottom: 20px !important;
+}
+
+.welcome-read-more-btn:hover {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+.welcome-socials {
+  display: flex !important;
+  gap: 15px !important;
+  align-items: center !important;
+}
+
+.welcome-socials a {
+  color: #a32626 !important; /* Red/brown socials matching reference */
+  font-size: 18px !important;
+  transition: color 0.2s ease !important;
+}
+
+.welcome-socials a:hover {
+  color: #333333 !important;
+}
+
+.welcome-img-col {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.welcome-map-img {
+  max-width: 100% !important;
+  height: auto !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .welcome-split-row {
+    flex-direction: column-reverse !important; /* Image goes to top on mobile for better flow */
+  }
+  .welcome-text-col {
+    padding-right: 0 !important;
+    margin-top: 25px !important;
+  }
+  .welcome-title {
+    font-size: 24px !important;
+  }
+}
+
+/* Premium Pill-Box Style for Card List Options */
+.news-box .block ul,
+.region-district-pofile ul,
+.region-district-information ul,
+.ntrtnw ul,
+.tab-2-box ul,
+.tab-2-box2 ul {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1px !important; /* Space between pill items */
+  padding: 0 !important;
+  margin: 0 !important;
+  list-style: none !important;
+}
+
+.news-box .block ul li,
+.region-district-pofile ul li,
+.region-district-information ul li,
+.ntrtnw ul li,
+.tab-2-box ul li,
+.tab-2-box2 ul li,
+.region-sectors-departments ul li,
+.tab-2-box2 .item-list-slider {
+  background-color: #ffffff !important;
+  border: 1px solid rgba(59, 34, 18, 0.08) !important;
+  border-radius: 10px !important;
+  padding: 8px 9px !important;
+  display: flex !important;
+  align-items: center !important;
+  position: relative !important;
+  transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02) !important;
+  border-bottom: 1px solid rgba(59, 34, 18, 0.08) !important; /* Override previous rule */
+}
+
+/* Circular left icon wrapper placeholder */
+.news-box .block ul li::before,
+.region-sectors-departments ul li::before,
+.region-district-pofile ul li::before,
+.region-district-information ul li::before,
+.tab-2-box2 .item-list-slider::before,
+.news-box .block .item-list-slider::before,
+.ntrtnw ul li::before,
+.tab-2-box ul li::before,
+.tab-2-box2 ul li::before {
+  content: "\f0f6" !important; /* Default document icon */
+  font-family: "FontAwesome" !important;
+  font-size: 14px !important;
+  color: #3b2212 !important;
+  background-color: rgba(211, 188, 169, 0.25) !important; /* Light theme-colored circular background */
+  width: 26px !important;
+  height: 26px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-right: 14px !important;
+  flex-shrink: 0 !important;
+  transition: all 0.25s ease !important;
+}
+
+/* Custom left icons per region */
+.region-district-pofile ul li::before { content: "\f06d" !important; } /* Fire flame icon */
+.region-district-information ul li::before { content: "\f1ad" !important; } /* Building icon (Earthquake) */
+.region-sectors-departments ul li::before { content: "\f0ad" !important; } /* Wrench/Tools (Kit) */
+.region-notice-alert ul li::before { content: "\f0c1" !important; } /* Link chain */
+.region-latest-news ul li::before,
+.region-latest-news .item-list-slider::before { content: "\f0a1" !important; } /* Megaphone */
+
+/* Right arrow indicator (Chevron) */
+.news-box .block ul li::after,
+.region-sectors-departments ul li::after,
+.region-district-pofile ul li::after,
+.region-district-information ul li::after,
+.tab-2-box2 .item-list-slider::after,
+.news-box .block .item-list-slider::after,
+.ntrtnw ul li::after,
+.tab-2-box ul li::after,
+.tab-2-box2 ul li::after {
+  content: "\f105" !important; /* Chevron right */
+  font-family: "FontAwesome" !important;
+  font-size: 16px !important;
+  color: #888888 !important;
+  position: absolute !important;
+  right: 18px !important;
+  transition: all 0.25s ease !important;
+}
+
+/* Hover effects on individual pills */
+.news-box .block ul li:hover,
+.region-sectors-departments ul li:hover,
+.region-district-pofile ul li:hover,
+.region-district-information ul li:hover,
+.tab-2-box2 .item-list-slider:hover,
+.news-box .block .item-list-slider:hover,
+.ntrtnw ul li:hover,
+.tab-2-box ul li:hover,
+.tab-2-box2 ul li:hover {
+  transform: translateY(-2px) !important; /* Slight lift */
+  border-color: #3b2212 !important;
+  box-shadow: 0 4px 12px rgba(59, 34, 18, 0.1) !important;
+  background-color: #faf8f5 !important;
+}
+
+.news-box .block ul li:hover::before,
+.region-sectors-departments ul li:hover::before,
+.region-district-pofile ul li:hover::before,
+.region-district-information ul li:hover::before,
+.tab-2-box2 .item-list-slider:hover::before,
+.news-box .block .item-list-slider:hover::before,
+.ntrtnw ul li:hover::before,
+.tab-2-box ul li:hover::before,
+.tab-2-box2 ul li:hover::before {
+  background-color: #3b2212 !important;
+  color: #ffffff !important;
+}
+
+.news-box .block ul li:hover::after,
+.region-sectors-departments ul li:hover::after,
+.region-district-pofile ul li:hover::after,
+.region-district-information ul li:hover::after,
+.tab-2-box2 .item-list-slider:hover::after,
+.news-box .block .item-list-slider:hover::after,
+.ntrtnw ul li:hover::after,
+.tab-2-box ul li:hover::after,
+.tab-2-box2 ul li:hover::after {
+  color: #3b2212 !important;
+  transform: translateX(3px) !important;
+}
+
+/* Align text layout inside pill */
+.news-box .block ul li a,
+.region-sectors-departments ul li a,
+.region-district-pofile ul li a,
+.region-district-information ul li a,
+.tab-2-box2 .item-list-slider a,
+.news-box .block .item-list-slider a,
+.ntrtnw ul li a,
+.tab-2-box ul li a,
+.tab-2-box2 ul li a {
+  padding-right: 25px !important; /* Avoid overlap with right chevron */
+  font-weight: 600 !important;
+  color: #3b2212 !important;
+  display: block !important;
+  width: 100% !important;
+}
+
+/* Card bottom footer bar styling */
+.news-box .block .more-link,
+.region-sectors-departments .more-link,
+.region-district-pofile .more-link,
+.region-district-information .more-link,
+.ntrtnw .more-link,
+.tab-2-box .more-link,
+.tab-2-box2 .more-link {
+  margin: 15px -20px -24px -20px !important; /* Negate card padding to stretch full width */
+  padding: 12px 20px !important;
+  background-color: rgba(59, 34, 18, 0.04) !important; /* Light bottom bar matching reference design */
+  border-top: 1px solid rgba(59, 34, 18, 0.08) !important;
+  border-bottom-left-radius: 12px !important;
+  border-bottom-right-radius: 12px !important;
+  text-align: right !important;
+}
+
+.news-box .block .more-link a,
+.region-sectors-departments .more-link a,
+.region-district-pofile .more-link a,
+.region-district-information .more-link a,
+.ntrtnw .more-link a,
+.tab-2-box .more-link a,
+.tab-2-box2 .more-link a {
+  font-size: 13px !important;
+  font-weight: bold !important;
+  color: #3b2212 !important;
+  border: 1px solid #3b2212 !important;
+  background-color: #ffffff !important;
+  border-radius: 6px !important;
+  padding: 6px 16px !important;
+  display: inline-block !important;
+  transition: all 0.2s ease !important;
+  text-transform: capitalize !important;
+}
+
+.news-box .block:hover .more-link a,
+.region-sectors-departments:hover .more-link a,
+.region-district-pofile:hover .more-link a,
+.region-district-information:hover .more-link a,
+.ntrtnw:hover .more-link a,
+.tab-2-box:hover .more-link a,
+.tab-2-box2:hover .more-link a {
+  background-color: #3b2212 !important;
+  color: #ffffff !important;
+}
+/* Remove broken squares/icons from Downloadable Forms links */
+.region-sectors-departments .views-field-field-upload-pdf::before,
+.region-sectors-departments a::before,
+.region-sectors-departments li::before,
+.region-sectors-departments .item-list ul li::before {
+  display: none !important;
+  content: "" !important;
 }
