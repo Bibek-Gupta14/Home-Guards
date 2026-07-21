@@ -28,12 +28,14 @@ Welcome to the modernized portal of the **Directorate of Civil Defence & Home Gu
 
 ## ⚡ Key Highlights & Features
 
+- **🎨 Unified Government Color Palette:** Custom warm brown theme (`#d3bca9` primary background and `#3b2212` text/nav accent) applied consistently across navigation headers, mega-menus, card headers, and footers.
+- **📱 Dynamic Multi-Scale Header Logos:** Header logos (`logo_left.png`, `logo_right.png`, `logo_center.png`) adapt dynamically across mobile ($320\text{px}$–$375\text{px}$), tablet ($768\text{px}$), and desktop ($1024\text{px}$) viewports using flexbox distribution.
 - **🎨 Dynamic Style Switcher:** Supports multiple accessibility themes, including a standard layout, a modern Grey Theme, and a high-contrast Black Theme for visually impaired users.
-- **♿ Accessibility Control panel:** Dedicated A+/A/A- text size changer, screen reader links, skip-to-content anchors, and fully standard HTML5 markup compliant with WCAG accessibility guidelines.
+- **♿ Accessibility Control Panel:** Dedicated A+/A/A- text size changer, screen reader links, skip-to-content anchors, and fully standard HTML5 markup compliant with WCAG accessibility guidelines.
 - **🗺️ Intuitive Mega-Menu Navigation:** Smooth, multi-level hover-triggered nested drop-down navigation, styled dynamically to display sub-options horizontally on large viewports.
-- **📰 Real-time News Marquee:** A customized pausing news feed containing circulars, emergency announcements, and active updates.
-- **📅 Dynamic Footer Metadata:** Includes an automatic javascript execution script to dynamically calculate and render the site's "Last Updated" timestamp.
-- **🏢 District Directory mapping:** Integrated listings for local district headquarters and sub-offices across Civil Defence and Home Guard branches.
+- **🛠️ Modern Citizen Services Portal (`services.html`):** Redesigned Services page featuring 50/50 height-balanced cards for *Home Guards* and *Civil Defence*, circular icon badges, and a 24x7 *Quick Access & Emergency Support* callout block.
+- **📦 Single-Card Architecture:** Optimized CSS rules (`custom.css`) to eliminate multi-layer nested card borders across *Links*, *Downloadable Forms*, and *Notice Board* blocks.
+- **🌐 Centered & Responsive Footer:** Mobile media queries ($<768\text{px}$) center Contact Us and Quick Links sections and format bottom legal menus into an evenly spaced, wrapped row (`justify-content: space-evenly`).
 
 ---
 
@@ -41,6 +43,8 @@ Welcome to the modernized portal of the **Directorate of Civil Defence & Home Gu
 
 We have performed extensive patches and layout compliance improvements across the portal:
 - **📱 Fully Responsive Navbar**: Redesigned breakpoints and transition queries (`custom.css`) to ensure the navigation header collapses properly without wrapping or breaking across mobile (`320px` to `370px`), tablet (`768px+`), and laptop (`1024px` to `1190px`) screen widths.
+- **🛠️ Services Page Modernization (`services.html`)**: Converted plain text lists into 50/50 height-balanced 2-column cards, removed color underline strips from section headings, and added a dedicated Emergency Support block.
+- **📦 Card Nesting & Layout Fixes**: Stripped duplicate background borders from inner region blocks (`.region-notice-alert`, `.news-box2`, `.ntrtnw`) to ensure every sidebar and homepage card renders as a single, clean card frame with a theme-matching "More +" pill button (`margin-top: auto`).
 - **🗺️ Integrated Sitemap (`sitemap.html`)**: Added a nested structured sitemap list detailing all accessibility pages, wings, and medals. The sitemap matches the site design and includes standard floats and sidebar positioning.
 - **🎨 Unified Photo Card Transitions**: Configured `old_photos.html` and `new_photos.html` category items so the entire `.field-item` card (border, shadow, translation) animates together on hover rather than just the image alone.
 - **♿ WCAG Accessibility & Contrast Compliance**:
