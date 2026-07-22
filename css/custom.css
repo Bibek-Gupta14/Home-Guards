@@ -1425,7 +1425,6 @@ body.theme-grey .field-name-field-gallery-thumbnail .image-caption {
 #maincontent .home-3-box-content {
   background-color: #eeeeee !important; /* Light grey background matching reference */
   border-radius: 12px !important;
-  hei
   padding: 40px 30px !important;
   border: none !important;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
@@ -2396,4 +2395,151 @@ body.theme-grey .field-name-field-gallery-thumbnail .image-caption {
   border: none !important;
   padding: 0 !important;
   box-shadow: none !important;
+}
+
+/* ==========================================================================
+   Modern Document Card Component (Matching Mockup for Notices & PDFs)
+   ========================================================================== */
+.lstnumrti ul,
+.field-name-field-upload-pdf .field-items {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+}
+
+.lstnumrti ul li,
+.field-name-field-upload-pdf .field-items .field-item {
+  background-color: #ffffff !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-left: 6px solid #3b2212 !important; /* Left brown accent bar matching mockup */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+  padding: 18px 24px !important;
+  margin-bottom: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 20px !important;
+  transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  position: relative !important;
+}
+
+.lstnumrti ul li:hover,
+.field-name-field-upload-pdf .field-items .field-item:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(59, 34, 18, 0.12) !important;
+  border-left-color: #5a361e !important;
+}
+
+/* Left Document Icon Badge */
+.lstnumrti ul li::before,
+.field-name-field-upload-pdf .field-items .field-item::before {
+  content: "\f15c" !important; /* FontAwesome file-text-o icon */
+  font-family: FontAwesome !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 10px !important;
+  background-color: #f8eae1 !important;
+  border: 1px solid #e2d2c5 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #3b2212 !important;
+  font-size: 20px !important;
+  flex-shrink: 0 !important;
+}
+
+/* Hide Drupal default file icon */
+.field-name-field-upload-pdf .file-icon {
+  display: none !important;
+}
+
+/* Title & Content Area */
+.lstnumrti ul li .views-field,
+.lstnumrti ul li .field-content,
+.field-name-field-upload-pdf .field-item .file {
+  flex-grow: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+}
+
+.lstnumrti ul li .newitem a,
+.lstnumrti ul li a,
+.field-name-field-upload-pdf .field-item a {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #1e1b18 !important;
+  line-height: 1.4 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+.lstnumrti ul li .newitem a:hover,
+.lstnumrti ul li a:hover,
+.field-name-field-upload-pdf .field-item a:hover {
+  color: #8c5835 !important;
+  text-decoration: underline !important;
+}
+
+/* Metadata Subtitle */
+.lstnumrti ul li .date-display-single {
+  font-size: 12.5px !important;
+  color: #786c62 !important;
+  font-weight: 500 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  margin-top: 2px !important;
+}
+
+.lstnumrti ul li .date-display-single::before {
+  content: "Date: " !important;
+  font-weight: 600 !important;
+  color: #5a4030 !important;
+}
+
+/* Right Side Action Button ("Open document") */
+.lstnumrti ul li::after,
+.field-name-field-upload-pdf .field-items .field-item::after {
+  content: "Open document \2197" !important;
+  font-family: "Open Sans", Arial, FontAwesome, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  background-color: #3b2212 !important;
+  padding: 8px 16px !important;
+  border-radius: 8px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  box-shadow: 0 2px 6px rgba(59, 34, 18, 0.15) !important;
+  transition: all 0.25s ease !important;
+}
+
+.lstnumrti ul li:hover::after,
+.field-name-field-upload-pdf .field-items .field-item:hover::after {
+  background-color: #5a361e !important;
+  box-shadow: 0 4px 12px rgba(59, 34, 18, 0.25) !important;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .lstnumrti ul li,
+  .field-name-field-upload-pdf .field-items .field-item {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 16px !important;
+  }
+  .lstnumrti ul li::after,
+  .field-name-field-upload-pdf .field-items .field-item::after {
+    width: 100% !important;
+    text-align: center !important;
+    margin-top: 8px !important;
+  }
 }
