@@ -2460,6 +2460,7 @@ body.theme-grey .field-name-field-gallery-thumbnail .image-caption {
 /* Title & Content Area */
 .lstnumrti ul li .views-field,
 .lstnumrti ul li .field-content,
+.lstnumrti ul li > .newitem,
 .field-name-field-upload-pdf .field-item .file {
   flex-grow: 1 !important;
   display: flex !important;
@@ -2541,5 +2542,292 @@ body.theme-grey .field-name-field-gallery-thumbnail .image-caption {
     width: 100% !important;
     text-align: center !important;
     margin-top: 8px !important;
+  }
+}
+
+/* ==========================================================================
+   Universal Table Alignment & Anti-Scroll Responsiveness Rules
+   ========================================================================== */
+table,
+.table,
+.table-bordered,
+.photo-gallery-table,
+.custom-address-table {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  table-layout: auto !important;
+  box-sizing: border-box !important;
+  border-collapse: collapse !important;
+}
+
+/* Force Left Alignment for All Table Headers, Cells & Nested Elements */
+table th,
+table td,
+table tr th,
+table tr td,
+.table th,
+.table td,
+.table-bordered th,
+.table-bordered td,
+table p,
+table span,
+table div,
+table strong,
+table b,
+table a,
+.rtecenter,
+.rteright {
+  text-align: left !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  word-break: normal !important;
+  white-space: normal !important;
+}
+
+/* Ensure Table Containers Fit Main Content Window Size Seamlessly */
+.table-responsive,
+.field-item table,
+.region-content table {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  margin-bottom: 20px !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 768px) {
+  table,
+  .table,
+  .table-bordered {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  table th,
+  table td {
+    padding: 8px 10px !important;
+    font-size: 13px !important;
+  }
+}
+
+/* ==========================================================================
+   Modern Table Styling (Address & Location and Data Tables)
+   ========================================================================== */
+.custom-address-table {
+  width: 100% !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  border: 1.5px solid #f0e4d2 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02) !important;
+  margin-bottom: 25px !important;
+  background-color: #ffffff !important;
+}
+
+.custom-address-table thead tr th {
+  background-color: #3b2212 !important;
+  color: #ffffff !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  padding: 14px 18px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.6px !important;
+  border: none !important;
+}
+
+.custom-address-table tbody tr td,
+.custom-address-table tbody tr td * {
+  font-family: 'Open Sans', sans-serif !important;
+  padding: 13px 18px !important;
+  font-size: 14px !important;
+  color: #334155 !important;
+  vertical-align: middle !important;
+  border-top: 1px solid #f0e4d2 !important;
+  line-height: 1.55 !important;
+}
+
+.custom-address-table tbody tr:nth-child(even) {
+  background-color: #fcf9f4 !important;
+}
+
+.custom-address-table tbody tr:hover {
+  background-color: #f5ebd9 !important;
+}
+
+/* ==========================================================================
+   Address & Location Header & Directorate Level Card (Matching User Mockup)
+   ========================================================================== */
+.address-page-header {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  margin-bottom: 24px !important;
+  margin-top: 10px !important;
+}
+
+.address-page-header .header-icon-badge {
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 50% !important;
+  background-color: #f7ebd8 !important;
+  border: 1px solid #ebdcc9 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #4a2c11 !important;
+  font-size: 24px !important;
+  flex-shrink: 0 !important;
+}
+
+.address-page-header .header-title-box {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.address-page-header h1,
+.address-page-header .page-main-title {
+  font-size: 26px !important;
+  font-weight: 700 !important;
+  color: #3b2212 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  line-height: 1.2 !important;
+}
+
+.address-page-header .page-subtitle {
+  font-size: 14px !important;
+  color: #64748b !important;
+  margin: 4px 0 0 0 !important;
+  font-weight: 400 !important;
+}
+
+.directorate-card-box {
+  background-color: #fcf8f2 !important;
+  border: 1.5px solid #f0e4d2 !important;
+  border-radius: 16px !important;
+  padding: 24px 28px !important;
+  margin-bottom: 30px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 24px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02) !important;
+}
+
+.directorate-card-box .building-icon-badge {
+  width: 72px !important;
+  height: 72px !important;
+  border-radius: 50% !important;
+  background-color: #f5e6d0 !important;
+  border: 1px solid #e7d4bc !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #4a2c11 !important;
+  font-size: 30px !important;
+  flex-shrink: 0 !important;
+}
+
+.directorate-card-box .card-content-area {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important;
+}
+
+.directorate-card-box h3 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: #3b2212 !important;
+  margin: 0 0 6px 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+.directorate-card-box .title-accent-line {
+  width: 36px !important;
+  height: 3px !important;
+  background-color: #b88f63 !important;
+  border-radius: 2px !important;
+  margin-bottom: 12px !important;
+}
+
+.directorate-card-box .address-detail-group {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 10px !important;
+}
+
+.directorate-card-box .pin-icon {
+  color: #a16207 !important;
+  font-size: 16px !important;
+  margin-top: 3px !important;
+  flex-shrink: 0 !important;
+}
+
+.directorate-card-box .address-text-block {
+  font-size: 14.5px !important;
+  color: #475569 !important;
+  line-height: 1.55 !important;
+}
+
+.directorate-card-box .org-name {
+  font-weight: 700 !important;
+  color: #1e293b !important;
+  display: block !important;
+  margin-bottom: 2px !important;
+}
+
+@media (max-width: 768px) {
+  .directorate-card-box {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 20px !important;
+    gap: 16px !important;
+  }
+  .directorate-card-box .building-icon-badge {
+    width: 60px !important;
+    height: 60px !important;
+    font-size: 24px !important;
+  }
+  .address-page-header {
+    align-items: flex-start !important;
+  }
+}
+
+/* ==========================================================================
+   Service Cards Vertical Column Separators & Text Justification
+   ========================================================================== */
+.service-grid-layout span:not([style*="width: 22px"]) {
+  text-align: justify !important;
+}
+
+.home-guards-right-col {
+  border-left: 2px solid #dbeafe !important;
+  padding-left: 24px !important;
+}
+
+.civil-defence-right-col {
+  border-left: 2px solid #e2d2c5 !important;
+  padding-left: 24px !important;
+}
+
+.quick-access-right-col {
+  border-left: 2px solid #e2d2c5 !important;
+  padding-left: 24px !important;
+}
+
+@media (max-width: 768px) {
+  .home-guards-right-col,
+  .civil-defence-right-col,
+  .quick-access-right-col {
+    border-left: none !important;
+    border-top: 2px solid #e2e8f0 !important;
+    padding-left: 0 !important;
+    padding-top: 16px !important;
+    margin-top: 10px !important;
   }
 }
