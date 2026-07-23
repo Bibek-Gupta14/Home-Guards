@@ -932,10 +932,18 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
  <div class="container" id="maincontain-textsize">
 <div id="maincontent"></div>
 <div class="row siderbartitle">
-	
+	<br>
 		
 	<div class="col-sm-9">
-	<h1 tabindex="0">Address and Location</h1>
+	<div class="address-page-header">
+		<div class="header-icon-badge">
+			<i class="fa fa-map-marker" aria-hidden="true"></i>
+		</div>
+		<div class="header-title-box">
+			<h1 tabindex="0" class="page-main-title">Address and Location</h1>
+			<p class="page-subtitle">Contact details of the Directorate and its Units.</p>
+		</div>
+	</div>
 	<div tabindex="0"><div class="region region-content">
   <div id="block-system-main" class="block block-system">
 
@@ -945,66 +953,77 @@ $( ".cssvalid a img" ).eq( 2 ).attr("src","https://achecker.ca/images/icon_W2_aa
       
     
   <div class="content">
-    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><div class="table-responsive">
-<table class="table table-bordered table-hover">
-<thead>
-<tr>
-<th class="rtecenter">Directorate Level</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="rtecenter">Directorate of Civil Defence and Home Guards<br />
-			Horse Shoe Building ,Lower Lachumiere ,<br />
-			Shillong- 793001.</td>
-</tr>
-</tbody>
-</table>
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded">
+
+<!-- Directorate Level Card Box (Matching Mockup) -->
+<div class="directorate-card-box">
+	<div class="building-icon-badge">
+		<i class="fa fa-university" aria-hidden="true"></i>
+	</div>
+	<div class="card-content-area">
+		<h3>Directorate Level</h3>
+		<div class="title-accent-line"></div>
+		<div class="address-detail-group">
+			<i class="fa fa-map-marker pin-icon" aria-hidden="true"></i>
+			<div class="address-text-block">
+				<span class="org-name">Directorate of Civil Defence and Home Guards</span>
+				Horse Shoe Building, Lower Lachumiere,<br>
+				Shillong – 793001.
+			</div>
+		</div>
+	</div>
 </div>
+
+<h2 style="font-size: 18px; font-weight: 700; color: #3b2212; margin-top: 25px; margin-bottom: 12px; background: transparent !important; border: none !important; padding: 0 !important;">Units &amp; Field Commands</h2>
 <div class="table-responsive">
-<table class="table table-bordered table-hover">
+<table class="table table-bordered table-hover custom-address-table">
 <thead>
 <tr>
-<th class="rtecenter">Units</th>
+<th style="width: 10%; text-align: center;">Sl. No.</th>
+<th style="width: 45%;">Unit / Office Name</th>
+<th style="width: 45%;">Address &amp; Location</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="rtecenter">Central Training Institute,Civil Defence &amp; Home Guards,<br />
-			Mawdiangdiang, Shillong-793018</td>
+<td style="text-align: center; font-weight: 600;">1</td>
+<td><strong>Central Training Institute</strong><br><small style="color: #64748b;">Civil Defence &amp; Home Guards</small></td>
+<td>Mawdiangdiang, Shillong - 793018</td>
 </tr>
 <tr>
-<td class="rtecenter">Border Wing Home Guards Battalion,<br />
-			Mawdiangdiang, Shillong-793018</td>
+<td style="text-align: center; font-weight: 600;">2</td>
+<td><strong>Border Wing Home Guards Battalion</strong></td>
+<td>Mawdiangdiang, Shillong - 793018</td>
 </tr>
 <tr>
-<td class="rtecenter">Commandant, District Home Guards,<br />
-			Mawdiangdiang, Shillong-793018</td>
+<td style="text-align: center; font-weight: 600;">3</td>
+<td><strong>Commandant, District Home Guards</strong></td>
+<td>Mawdiangdiang, Shillong - 793018</td>
 </tr>
 <tr>
-<td class="rtecenter">
-			Deputy Controller of Civil Defence,<br />
-			Additional Secretariat Building ,<br />
-			No.Shillong-793001</td>
+<td style="text-align: center; font-weight: 600;">4</td>
+<td><strong>Deputy Controller of Civil Defence</strong></td>
+<td>Additional Secretariat Building, Shillong - 793001</td>
 </tr>
 <tr>
-<td class="rtecenter">Commandant, District Home Guards,<br />
-			Jowai,Kynruh Sohphlang,<br />
-			Ladthalaboh,Jaintia Hills District,<br />
-			Jowai.</td>
+<td style="text-align: center; font-weight: 600;">5</td>
+<td><strong>Commandant, District Home Guards</strong><br><small style="color: #64748b;">Jowai</small></td>
+<td>Kynruh Sohphlang, Ladthalaboh, West Jaintia Hills District, Jowai</td>
 </tr>
 <tr>
-<td class="rtecenter">Deputy Controller of Civil Defence, Jowai <br />
-			Kynruh Sohphlang, Ladthalaboh,<br />
-			Jaintia Hills District, Jowai.</td>
+<td style="text-align: center; font-weight: 600;">6</td>
+<td><strong>Deputy Controller of Civil Defence</strong><br><small style="color: #64748b;">Jowai</small></td>
+<td>Kynruh Sohphlang, Ladthalaboh, West Jaintia Hills District, Jowai</td>
 </tr>
 <tr>
-<td class="rtecenter">Commandant, District Home Guards, Tura<br />
-			Araimile, West Garo Hills, Tura.</td>
+<td style="text-align: center; font-weight: 600;">7</td>
+<td><strong>Commandant, District Home Guards</strong><br><small style="color: #64748b;">Tura</small></td>
+<td>Araimile, West Garo Hills, Tura</td>
 </tr>
 <tr>
-<td class="rtecenter">Deputy Controller of Civil Defence, Tura<br />
-			Araimile, West Garo Hills, Tura.</td>
+<td style="text-align: center; font-weight: 600;">8</td>
+<td><strong>Deputy Controller of Civil Defence</strong><br><small style="color: #64748b;">Tura</small></td>
+<td>Araimile, West Garo Hills, Tura</td>
 </tr>
 </tbody>
 </table>
