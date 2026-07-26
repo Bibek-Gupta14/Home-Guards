@@ -117,7 +117,7 @@ Then navigate to `http://localhost:8000` in your web browser.
 ### Node.js HTTP Server
 Or via npm:
 ```bash
-npx http-server -p 8000 .
+npx http-server -p 8000
 ```
 
 ---
