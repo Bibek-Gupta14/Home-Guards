@@ -27,7 +27,7 @@ Welcome to the modernized portal of the **Directorate of Civil Defence & Home Gu
 ## ⚡ Key Highlights & Features
 
 - **🎨 Unified Government Color Palette:** Custom warm brown theme (`#d3bca9` primary background and `#3b2212` text/nav accent) applied consistently across navigation headers, mega-menus, card headers, and footers.
-- **📱 Dynamic Multi-Scale Header Logos:** Header logos (`logo_left.png`, `logo_right.png`, `logo_center.png`) adapt dynamically across mobile ($320\text{px}$–$375\text{px}$), tablet ($768\text{px}$), and desktop ($1024\text{px}$) viewports using flexbox distribution.
+- **📱 Dynamic Multi-Scale Header Logos:** Header logos (`logo_left.png`, `logo_right.png`, `logo_center.png`) adapt dynamically across mobile (320{px}–375{px}), tablet ($768\text{px}$), and desktop ($1024\text{px}$) viewports using flexbox distribution.
 - **🎨 Dynamic Style Switcher:** Supports multiple accessibility themes, including a standard layout, a modern Grey Theme, and a high-contrast Black Theme for visually impaired users.
 - **♿ Accessibility Control Panel:** Dedicated A+/A/A- text size changer, screen reader links, skip-to-content anchors, and fully standard HTML5 markup compliant with WCAG accessibility guidelines.
 - **🗺️ Intuitive Mega-Menu Navigation:** Smooth, multi-level hover-triggered nested drop-down navigation, styled dynamically to display sub-options horizontally on large viewports.
