@@ -8,8 +8,6 @@
 
 *Empowering citizens, ensuring safety, and coordinating disaster response across the state of Meghalaya.*
 
----
-
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -29,7 +27,7 @@ Welcome to the modernized portal of the **Directorate of Civil Defence & Home Gu
 ## ⚡ Key Highlights & Features
 
 - **🎨 Unified Government Color Palette:** Custom warm brown theme (`#d3bca9` primary background and `#3b2212` text/nav accent) applied consistently across navigation headers, mega-menus, card headers, and footers.
-- **📱 Dynamic Multi-Scale Header Logos:** Header logos (`logo_left.png`, `logo_right.png`, `logo_center.png`) adapt dynamically across mobile ($320\text{px}$–$375\text{px}$), tablet ($768\text{px}$), and desktop ($1024\text{px}$) viewports using flexbox distribution.
+- **📱 Dynamic Multi-Scale Header Logos:** Header logos (`logo_left.png`, `logo_right.png`, `logo_center.png`) adapt dynamically across mobile (320{px}–375{px}), tablet ($768\text{px}$), and desktop ($1024\text{px}$) viewports using flexbox distribution.
 - **🎨 Dynamic Style Switcher:** Supports multiple accessibility themes, including a standard layout, a modern Grey Theme, and a high-contrast Black Theme for visually impaired users.
 - **♿ Accessibility Control Panel:** Dedicated A+/A/A- text size changer, screen reader links, skip-to-content anchors, and fully standard HTML5 markup compliant with WCAG accessibility guidelines.
 - **🗺️ Intuitive Mega-Menu Navigation:** Smooth, multi-level hover-triggered nested drop-down navigation, styled dynamically to display sub-options horizontally on large viewports.
@@ -117,7 +115,7 @@ Then navigate to `http://localhost:8000` in your web browser.
 ### Node.js HTTP Server
 Or via npm:
 ```bash
-npx http-server -p 8000 .
+npx http-server -p 8000
 ```
 
 ---
